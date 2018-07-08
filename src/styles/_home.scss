@@ -1,0 +1,229 @@
+$featureheightmobile: 100;
+$featureheight: 50;
+
+@mixin showAddToCart() {
+    &:hover .add-to-cart-container {
+        transform: scaleY(1);
+    }
+}
+
+@mixin hideDesc() {
+    &:hover .description {
+        transform: scaleY(0);
+    }
+}
+
+@mixin zoomCatLogo() {
+    &:hover {
+        .category-logo {
+            transform: scale(1.1);
+            transition: .2s ease;
+            box-shadow: 2px 5px 8px #9998a2;
+        }
+        span {
+            color: #020202;
+        }
+        cursor: pointer;
+        text-shadow: 1px 1px #9998a2;
+    }
+    &:not(:hover) .category-logo {
+        transform: scale(1);
+        transition: .4s;
+    }
+}
+
+header {
+    width: 100%;
+    @include xheight(15);
+    background: #fff;
+    box-shadow: 2px 5px 8px #9998a2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    nav {
+        width: 100%;
+        text-align: right;
+        align-self: center;
+    }
+    ul {
+        display: inline-flex;
+        list-style: none;
+        li {
+            padding-right: 50px;
+        }
+    }
+    .logo img {
+        height: 100%;
+    }
+}
+
+.container {
+
+    height: 1000vh;
+}
+
+.menu-container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.featured-carousel {
+    @include xheight($featureheightmobile);
+    background: linear-gradient(135deg, #171a29, #303446);
+
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu-items {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+
+}
+
+.menu-item {
+    @include select();
+    @include showAddToCart();
+    @include hideDesc();
+    padding: 5px; //margin: 0 auto;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    border-radius: 30px;
+    margin-top: 5px;
+    flex-basis: 30%;
+    display: flex;
+    min-width: 300px;
+    flex-direction: column;
+    div {
+        overflow: hidden;
+        border-radius: 30px;
+        width: 100%;
+        img {
+            @include zoom();
+            width: 100%;
+            height: auto;
+        }
+        span {
+            text-align: center;
+            width: 45%;
+            display: inline-block;
+        }
+        .description {
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            transform-origin: top;
+            transition: transform 0.3s ease;
+        }
+        input {
+            width: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .label {}
+    }
+    h3 {
+        text-align: center;
+    }
+}
+
+.item-description {
+    position: relative;
+    min-height: 125px;
+    border-radius: 30px;
+}
+
+.add-to-cart-container {
+    border-radius: 30px;
+    position: absolute;
+    display: flex;
+    padding: 5px;
+    transform: scaleY(0);
+    height: 100%;
+    top: 0;
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fafafa;
+    button {
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+        background-color: #3ec62e;
+    }
+
+}
+
+.category {
+    margin: 5%;
+    margin-bottom: 0;
+
+}
+
+section:target::before {
+     
+        padding-top: 100px;
+    
+}
+
+.categories {
+    top: 15vh;
+    position: sticky;
+    min-width: 200px;
+    box-shadow: 1px 3px 5px #9998a2;
+    @include xheight(85);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    ul {
+        margin: 0 auto;
+        list-style: none;
+        height: 100%;
+        display: flex;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    div {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+    li {
+        min-height: 50px;
+        padding-left: 20px;
+        position: relative;
+        @include zoomCatLogo();
+    }
+    span {
+        position: absolute;
+        height: 20px;
+        top: 50%;
+        margin-top: -10px;
+        padding-left: 10px;
+        color: #777777;
+    }
+    img {
+        border-radius: 50px;
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+
+
+    .featured-carousel {
+        @include xheight($featureheight);
+    }
+
+
+}
