@@ -1,5 +1,6 @@
 $featureheightmobile: 100;
-$featureheight: 50;
+$featureheight: 70;
+
 
 @mixin showAddToCart() {
     &:hover .add-to-cart-container {
@@ -70,7 +71,8 @@ header {
 
 .featured-carousel {
     @include xheight($featureheightmobile);
-    background: linear-gradient(135deg, #171a29, #303446);
+    background: linear-gradient(135deg, #363404, #070d29);
+
 
 }
 
@@ -169,9 +171,9 @@ header {
 }
 
 section:target::before {
-     
-        padding-top: 100px;
-    
+
+    padding-top: 100px;
+
 }
 
 .categories {
@@ -199,7 +201,9 @@ section:target::before {
         height: 100%;
     }
     li {
-        min-height: 50px;
+        display: flex;
+        align-items: center;
+        min-height: 75px;
         padding-left: 20px;
         position: relative;
         @include zoomCatLogo();
@@ -217,12 +221,94 @@ section:target::before {
     }
 }
 
+.search-bar {
+    margin: 5%;
+    input {
+        width: 100%;
+        border-radius: 30px;
+        border-style: groove;
+        height: 35px;
+        padding: 20px;
+    }
+    input:focus {
+        outline: none;
+    }
 
-@media screen and (min-width: 1100px) {
+    .search-result {
+        border-style: groove;
+        overflow-y: auto;
+        max-height: 200px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 2px;
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 11px) {
 
 
     .featured-carousel {
         @include xheight($featureheight);
+        @include xminHeight($featureheight);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .slider {
+            display: flex;
+            position: absolute;
+            width: 85%;
+            overflow: hidden;
+            align-items: center;
+        }
+        .left {
+            position: absolute;
+            left: 0;
+            margin-left: 20px;
+        }
+        .right {
+            position: absolute;
+            right: 0;
+            margin-right: 20px;
+        }
+    }
+
+    .featured-item {
+        height: 90%;
+        min-width: 100%;
+        justify-content: center;
+        border-radius: 30px;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        position: relative; //  margin: 25px;
+        img {
+            border-radius: 30px;
+            max-width: 80%;
+            position: relative;
+        }
+    }
+
+    .discount-text {
+        position: absolute;
+        background-color: #fff;
+        padding: 5px;
+        top: 5%;
+    }
+
+    .featured-item-desc {
+        position: absolute;
+        color: #fff;
+        bottom: 10%;
+        font-size: 28px;
+        font-weight: 800;
+        width: 30%;
+        letter-spacing: 3px;
+        text-align: center;
+
     }
 
 
