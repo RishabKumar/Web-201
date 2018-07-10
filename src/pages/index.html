@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <header>
+    <header class='header-height-l'>
         <div class='logo'>
             <img src='https://www.nusu.co.uk/asset/Organisation/6583/Logo%20cropped.png?thumbnail_width=480&thumbnail_height=480&resize_type=ResizeWidth'>
         </div>
@@ -21,36 +21,36 @@
         <section class="featured-carousel">
             <i class="arrow left"></i>
             <div class='slider'>
-                 
-                <div class='featured-item'  >
+
+                <div class='featured-item'>
                     <img src="static/Chicken-Biryani.jpg" />
                     <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
                     <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
                 </div>
-                
-                <div class='featured-item'  >
+
+                <div class='featured-item'>
                     <img src="static/Chicken-Biryani.jpg" />
                     <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
                     <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
                 </div>
-                
-                <div class='featured-item'  >
+
+                <div class='featured-item'>
                     <img src="static/Chicken-Biryani.jpg" />
                     <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
                     <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
                 </div>
-                
-                <div class='featured-item'  >
+
+                <div class='featured-item'>
                     <img src="static/Chicken-Biryani.jpg" />
                     <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
                     <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
                 </div>
-                <div class='featured-item'  >
+                <div class='featured-item'>
                     <img src="static/Chicken-Biryani.jpg" />
                     <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
                     <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
                 </div>
-                 
+
 
             </div>
             <i class="arrow right"></i>
@@ -64,11 +64,11 @@
                 <section class='categories col-2'>
                     <div>
                         <ul>
-                            <li id="cat-popular"><a href='#popular'><img class='category-logo' src='static/icons/burn.svg' width='50px'><span>Popular</span></a></li>
-                            <li id="cat-pocket-friendly"><a href='#pocket-friendly'><img class='category-logo' src='static/icons/breakfast.svg' width='50px'><span>Pocket Friendly</span></a></li>
-                            <li id="cat-speciality"><a href='#speciality'><img class='category-logo' src='static/icons/dinner.svg' width='50px'><span>Speciality</span></a></li>
-                            <li id="cat-new"><a href='#new'><img class='category-logo' src='static/icons/new.svg' width='50px'><span>What's New</span></a></li>
-                            <li id="cat-vegetarian"><a href='#vegetarian'><img class='category-logo' src='static/icons/vegetables.svg' width='50px'><span>Vegetarian</span></a></li>
+                            <li id="cat-popular"><a href='#popular-placeholder'><img class='category-logo' src='static/icons/burn.svg' width='50px'><span>Popular</span></a></li>
+                            <li id="cat-pocket-friendly"><a href='#pocket-friendly-placeholder'><img class='category-logo' src='static/icons/breakfast.svg' width='50px'><span>Pocket Friendly</span></a></li>
+                            <li id="cat-speciality"><a href='#speciality-placeholder'><img class='category-logo' src='static/icons/dinner.svg' width='50px'><span>Speciality</span></a></li>
+                            <li id="cat-new"><a href='#new-placeholder'><img class='category-logo' src='static/icons/new.svg' width='50px'><span>What's New</span></a></li>
+                            <li id="cat-vegetarian"><a href='#vegetarian-placeholder'><img class='category-logo' src='static/icons/vegetables.svg' width='50px'><span>Vegetarian</span></a></li>
 
                         </ul>
                     </div>
@@ -76,17 +76,17 @@
                 </section>
 
 
-                <section class='col-10'>
+                <section class='col-10 menu-item-container'>
                     <section class='search-bar'>
                         <div>
-                            <input type='text' placeholder='Type to search...'/>
+                            <input type='text' placeholder='Type to search...' />
                             <div class='search-result'>
-                                
+
                             </div>
                         </div>
                     </section>
                     <section id='popular' class='category'>
-
+                        <div id='popular-placeholder' class='category-placeholder'></div>
                         <h2>
                             Popular
                         </h2>
@@ -105,15 +105,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        H<input type='radio' name='size'>
+                                        F<input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -135,15 +135,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -165,15 +165,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -195,15 +195,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -225,15 +225,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -245,7 +245,7 @@
                         <hr>
                     </section>
                     <section id='pocket-friendly' class='category'>
-
+                        <div id='pocket-friendly-placeholder' class='category-placeholder'></div>
                         <h2>
                             Pocket-Friendly
                         </h2>
@@ -264,15 +264,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -294,15 +294,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -324,15 +324,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -354,15 +354,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -384,15 +384,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -404,7 +404,7 @@
                         <hr>
                     </section>
                     <section id='speciality' class='category'>
-
+                        <div id='speciality-placeholder' class='category-placeholder'></div>
                         <h2>
                             Speciality
                         </h2>
@@ -431,7 +431,7 @@
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -453,15 +453,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -483,15 +483,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -513,15 +513,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -543,15 +543,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -563,7 +563,7 @@
                         <hr>
                     </section>
                     <section id='new' class='category'>
-
+                        <div id='new-placeholder' class='category-placeholder'></div>
                         <h2>
                             New
                         </h2>
@@ -582,15 +582,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -612,15 +612,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -642,15 +642,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -672,15 +672,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -702,15 +702,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -722,7 +722,7 @@
                         <hr>
                     </section>
                     <section id='vegetarian' class='category'>
-
+                        <div id='vegetarian-placeholder' class='category-placeholder'></div>
                         <h2>
                             Vegetarian
                         </h2>
@@ -741,15 +741,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -771,15 +771,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -801,15 +801,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -831,15 +831,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -861,15 +861,15 @@
                                         <div>
                                             <span class='label'>SIZE: </span>
                                             <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
                                         </div>
                                         <div>
                                             <span class='label'>QTY: </span>
                                             <span>
                                         <a href='#'>-</a>
-                                        <input type='number' readonly>
+                                        <input type='text' readonly>
                                         <a href='#'>+</a>
                                     </span>
                                         </div>
@@ -885,6 +885,7 @@
                 </section>
             </section>
 
+         
         </section>
     </section>
 </body>

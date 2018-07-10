@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <header>
+    <header class='header-height-l'>
         <div class='logo'>
             <img src='https://www.nusu.co.uk/asset/Organisation/6583/Logo%20cropped.png?thumbnail_width=480&thumbnail_height=480&resize_type=ResizeWidth'>
         </div>
@@ -19,7 +19,41 @@
     <section class="container">
 
         <section class="featured-carousel">
+            <i class="arrow left"></i>
+            <div class='slider'>
 
+                <div class='featured-item'>
+                    <img src="static/Chicken-Biryani.jpg" />
+                    <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
+                    <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
+                </div>
+
+                <div class='featured-item'>
+                    <img src="static/Chicken-Biryani.jpg" />
+                    <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
+                    <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
+                </div>
+
+                <div class='featured-item'>
+                    <img src="static/Chicken-Biryani.jpg" />
+                    <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
+                    <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
+                </div>
+
+                <div class='featured-item'>
+                    <img src="static/Chicken-Biryani.jpg" />
+                    <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
+                    <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
+                </div>
+                <div class='featured-item'>
+                    <img src="static/Chicken-Biryani.jpg" />
+                    <span class='discount-text'>FLAT 10% OFF ON BIRYANI'S</span>
+                    <span class='featured-item-desc'>ARE YOU A BIRYANI LOVER ?</span>
+                </div>
+
+
+            </div>
+            <i class="arrow right"></i>
 
         </section>
         <section class='menu-container'>
@@ -27,360 +61,829 @@
 
             <section class='menu'>
 
-                <section class='category col-3'>
+                <section class='categories col-2'>
                     <div>
                         <ul>
-                            <li>Popular</li>
-                            <li>Pocket Friendly</li>
-                            <li>Speciality</li>
-                            <li>What's New</li>
-                            <li>Vegetarian</li>
-                            <li></li>
+                            <li id="cat-popular"><a href='#popular-placeholder'><img class='category-logo' src='static/icons/burn.svg' width='50px'><span>Popular</span></a></li>
+                            <li id="cat-pocket-friendly"><a href='#pocket-friendly-placeholder'><img class='category-logo' src='static/icons/breakfast.svg' width='50px'><span>Pocket Friendly</span></a></li>
+                            <li id="cat-speciality"><a href='#speciality-placeholder'><img class='category-logo' src='static/icons/dinner.svg' width='50px'><span>Speciality</span></a></li>
+                            <li id="cat-new"><a href='#new-placeholder'><img class='category-logo' src='static/icons/new.svg' width='50px'><span>What's New</span></a></li>
+                            <li id="cat-vegetarian"><a href='#vegetarian-placeholder'><img class='category-logo' src='static/icons/vegetables.svg' width='50px'><span>Vegetarian</span></a></li>
+
                         </ul>
                     </div>
 
                 </section>
 
 
+                <section class='col-10 menu-item-container'>
+                    <section class='search-bar'>
+                        <div>
+                            <input type='text' placeholder='Type to search...' />
+                            <div class='search-result'>
 
-
-                <section class='menu-items col-9'>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            </div>
+                        </div>
+                    </section>
+                    <section id='popular' class='category'>
+                        <div id='popular-placeholder' class='category-placeholder'></div>
+                        <h2>
+                            Popular
+                        </h2>
+                        <section class='menu-items'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                        </section>
+                        <hr>
+                    </section>
+                    <section id='pocket-friendly' class='category'>
+                        <div id='pocket-friendly-placeholder' class='category-placeholder'></div>
+                        <h2>
+                            Pocket-Friendly
+                        </h2>
+                        <section class='menu-items'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
-                                        <input type='radio'>
-                                        <input type='radio'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class='menu-item'>
-                        <div><img src="static/Chicken-Biryani.jpg" /></div>
-                        <h3>Chiken Biryani 21</h3>
-                        <div class='item-description'>
-                            <hr/>
-                            <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
-                            <div class='add-to-cart-container'>
-                                <div>
-                                    <span class='label'>PRICE</span>
-                                    <span class='price'>Rs 125</span>
-                                </div>
-                                <div>
-                                    <span class='label'>SIZE: </span>
-                                    <span>
+                        </section>
+                        <hr>
+                    </section>
+                    <section id='speciality' class='category'>
+                        <div id='speciality-placeholder' class='category-placeholder'></div>
+                        <h2>
+                            Speciality
+                        </h2>
+                        <section class='menu-items'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
                                         <input type='radio'>
                                         <input type='radio'>
                                     </span>
-                                </div>
-                                <div>
-                                    <span class='label'>QTY: </span>
-                                    <span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
                                         <a href='#'>-</a>
                                         <input type='number' readonly>
                                         <a href='#'>+</a>
                                     </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
                                 </div>
-                                <button>Add to cart</button>
                             </div>
-                        </div>
-                    </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr>
+                    </section>
+                    <section id='new' class='category'>
+                        <div id='new-placeholder' class='category-placeholder'></div>
+                        <h2>
+                            New
+                        </h2>
+                        <section class='menu-items'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr>
+                    </section>
+                    <section id='vegetarian' class='category'>
+                        <div id='vegetarian-placeholder' class='category-placeholder'></div>
+                        <h2>
+                            Vegetarian
+                        </h2>
+                        <section class='menu-items'>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='menu-item'>
+                                <div><img src="static/Chicken-Biryani.jpg" /></div>
+                                <h3>Chiken Biryani 21</h3>
+                                <div class='item-description'>
+                                    <hr/>
+                                    <span class='description'>Chicken Biryani served with basmati rice and our secret 21 herbs and spices.</span>
+                                    <div class='add-to-cart-container'>
+                                        <div>
+                                            <span class='label'>PRICE</span>
+                                            <span class='price'>Rs 125</span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>SIZE: </span>
+                                            <span>
+                                        <input type='radio' name='size'>
+                                        <input type='radio' name='size'>
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <span class='label'>QTY: </span>
+                                            <span>
+                                        <a href='#'>-</a>
+                                        <input type='number' readonly>
+                                        <a href='#'>+</a>
+                                    </span>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr>
+                    </section>
 
 
                 </section>
-
             </section>
-
 
         </section>
     </section>

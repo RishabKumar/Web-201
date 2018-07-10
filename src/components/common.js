@@ -6,6 +6,7 @@ export const selector = (function () {
         "slider": () => document.querySelector('.slider'),
         "categories": () => document.querySelectorAll('.categories li'),
         "category": () => document.querySelectorAll('section.category'),
-        "categorytarget": () => document.querySelector('section.category:target')
+        "categorytarget": () => document.querySelector('section.category:target'),
+        "header": () => document.querySelector('header')
     };
 })();

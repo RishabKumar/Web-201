@@ -1,6 +1,9 @@
 $featureheightmobile: 100;
 $featureheight: 70;
 
+$headerheight_l: 15;
+$headerheight_s: 8;
+
 
 @mixin showAddToCart() {
     &:hover .add-to-cart-container {
@@ -11,6 +14,7 @@ $featureheight: 70;
 @mixin hideDesc() {
     &:hover .description {
         transform: scaleY(0);
+        height: 0px;
     }
 }
 
@@ -35,7 +39,7 @@ $featureheight: 70;
 
 header {
     width: 100%;
-    @include xheight(15);
+
     background: #fff;
     box-shadow: 2px 5px 8px #9998a2;
     position: sticky;
@@ -57,6 +61,14 @@ header {
     .logo img {
         height: 100%;
     }
+}
+
+.header-height-l {
+    @include xheight($headerheight_l);
+}
+
+.header-height-s {
+    @include xheight($headerheight_s);
 }
 
 .container {
@@ -94,8 +106,7 @@ header {
     @include showAddToCart();
     @include hideDesc();
     padding: 5px; //margin: 0 auto;
-    margin-bottom: 5px;
-    margin-left: 25px;
+    margin-bottom: 5px; //   margin-left: 2%;
     border-radius: 30px;
     margin-top: 5px;
     flex-basis: 30%;
@@ -126,6 +137,15 @@ header {
         input {
             width: 20px;
         }
+        input[type='radio'] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            border: 1px solid;
+            width: 20px;
+            height: 20px;
+            transform: translate(-15px, 5px);
+        }
         a {
             text-decoration: none;
         }
@@ -136,19 +156,23 @@ header {
     }
 }
 
+.menu-item-container {
+    padding-left: 10px;
+}
+
+
 .item-description {
     position: relative;
-    min-height: 125px;
     border-radius: 30px;
+    min-height: 115px;
 }
 
 .add-to-cart-container {
-    border-radius: 30px;
-    position: absolute;
+    border-radius: 30px; //position: absolute;
     display: flex;
+    position: absolute;
     padding: 5px;
     transform: scaleY(0);
-    height: 100%;
     top: 0;
     transform-origin: bottom;
     transition: transform 0.3s ease;
@@ -157,17 +181,27 @@ header {
     background-color: #fafafa;
     button {
         width: 100%;
-        height: 30px;
+        height: 28px;
         border-radius: 30px;
-        background-color: #3ec62e;
+        background-color: #388e3c;
+        color: #fff;
+    }
+    div {
+        padding: 1%;
     }
 
 }
 
 .category {
-    margin: 5%;
+    // margin: 0 5% 0% 5%;
     margin-bottom: 0;
+    h2 {
+        margin-left: 2%;
+    }
+}
 
+.category-placeholder {
+    @include xheight($headerheight_s+1);
 }
 
 section:target::before {
@@ -177,7 +211,7 @@ section:target::before {
 }
 
 .categories {
-    top: 15vh;
+    top: 8vh;
     position: sticky;
     min-width: 200px;
     box-shadow: 1px 3px 5px #9998a2;
@@ -207,6 +241,9 @@ section:target::before {
         padding-left: 20px;
         position: relative;
         @include zoomCatLogo();
+        a {
+            width: 100%;
+        }
     }
     span {
         position: absolute;
@@ -222,7 +259,7 @@ section:target::before {
 }
 
 .search-bar {
-    margin: 5%;
+    margin: 5% 2% 0% 2%;
     input {
         width: 100%;
         border-radius: 30px;
@@ -246,69 +283,113 @@ section:target::before {
 
 }
 
-
-@media screen and (min-width: 11px) {
-
-
-    .featured-carousel {
-        @include xheight($featureheight);
-        @include xminHeight($featureheight);
+.featured-carousel {
+    @include xheight($featureheight);
+    @include xminHeight($featureheight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .slider {
         display: flex;
+        position: absolute;
+        width: 85%;
+        max-height: 90%;
+        overflow: hidden;
         align-items: center;
-        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .left {
+        position: absolute;
+        left: 0;
+        margin-left: 20px;
+    }
+    .right {
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+    }
+}
+
+.featured-item {
+    height: 90%;
+    min-width: 100%;
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    img {
+        border-radius: 30px 30px 30px 30px;
+        max-width: 80%;
         position: relative;
-        .slider {
-            display: flex;
-            position: absolute;
-            width: 85%;
-            overflow: hidden;
-            align-items: center;
-        }
-        .left {
-            position: absolute;
-            left: 0;
-            margin-left: 20px;
-        }
-        .right {
-            position: absolute;
-            right: 0;
-            margin-right: 20px;
-        }
+    }
+}
+
+.discount-text {
+    position: absolute;
+    background-color: #fff;
+    padding: 5px;
+    top: 5%;
+    width: 30%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featured-item-desc {
+    position: absolute;
+    color: #fff;
+    bottom: 10%;
+    font-size: 28px;
+    font-weight: 800;
+    width: 30%;
+    letter-spacing: 3px;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+@media (max-width: 1000px) {
+    .menu-item-container {
+        margin: 0 auto;
+        padding: 0;
     }
 
-    .featured-item {
-        height: 90%;
-        min-width: 100%;
-        justify-content: center;
-        border-radius: 30px;
-        display: flex;
-        display: flex;
-        justify-content: center;
-        position: relative; //  margin: 25px;
-        img {
-            border-radius: 30px;
-            max-width: 80%;
-            position: relative;
+    .categories {
+        display: none;
+    }
+
+    .menu-item {
+        flex-basis: 100%;
+
+    }
+    .add-to-cart-container button {
+        height: 50px;
+    }
+    .item-description {
+        button {
+            height: 50px;
         }
+        min-height: 165px;
     }
-
-    .discount-text {
-        position: absolute;
-        background-color: #fff;
-        padding: 5px;
-        top: 5%;
-    }
-
-    .featured-item-desc {
-        position: absolute;
-        color: #fff;
-        bottom: 10%;
-        font-size: 28px;
-        font-weight: 800;
-        width: 30%;
-        letter-spacing: 3px;
-        text-align: center;
-
+    .search-bar input {
+        height: 75px;
     }
 
 
