@@ -3,6 +3,7 @@
 <head>
     <title>FOODIE</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -62,8 +63,12 @@
 
             <section class='menu'>
 
-                <section class='categories '>
-                    <div>
+                <section class='categories'>
+                    <div class='mobile-category-icon'>
+                        <img class='category-logo' src='static/icons/hamburger.svg' width='50px'>
+                    </div>
+
+                    <div class='categories-container'>
                         <ul>
                             <li id="cat-popular"><a href='#popular-placeholder'><img class='category-logo' src='static/icons/burn.svg' width='50px'><span>Popular</span></a></li>
                             <li id="cat-pocket-friendly"><a href='#pocket-friendly-placeholder'><img class='category-logo' src='static/icons/breakfast.svg' width='50px'><span>Pocket Friendly</span></a></li>
@@ -108,8 +113,8 @@
                                         </div>
                                         <div>
                                             <h4>
-                                                <span class='label'>SIZE: </span>
-                                                <span>
+                                                <span>SIZE: </span>
+                                                <span class='label'>
                                                     H<input type='radio' name='size'>
                                                     F<input type='radio' name='size'>
                                                 </span>
@@ -925,7 +930,6 @@
             <section class='full-menu'>
                 <div>
                     <section id='popular' class='category'>
-                        <div id='popular-placeholder' class='category-placeholder'></div>
                         <h2>
                             FULL MENU
                         </h2>
@@ -1080,7 +1084,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class='menu-item'>
                                 <div><img src="static/Chicken-Biryani.jpg" /></div>
                                 <h3>Chiken Biryani 21</h3>
