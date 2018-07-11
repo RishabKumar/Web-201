@@ -19,8 +19,6 @@
     }
 }
 
-
-
 @mixin select() {
     &:hover {
         box-shadow: 5px 5px 20px 3px #9998a2;
@@ -30,6 +28,48 @@
         transition: .2s;
     }
 }
+
+$basefontsize: 1.5rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    font-size: $basefontsize * 2;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: $basefontsize * 1.25;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: $basefontsize * .75;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: $basefontsize * .65;
+}
+
+h5 {
+    font-weight: 100;
+    font-size: $basefontsize * .65;
+}
+
+input {
+    font-weight: 500;
+}
+
+
 
 html {
     overflow-y: scroll;
@@ -47,7 +87,7 @@ i {
         padding: 1px;
         border-color: lighten(#536098, 80%);
         cursor: pointer;
-    } 
+    }
 }
 
 .right {
