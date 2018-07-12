@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: ['babel-polyfill', './src/index.js'],
@@ -36,7 +37,11 @@ module.exports = {
                 from: 'src/static',
                 to: 'static'
             }
-        ])
+        ]),
+        new webpack.LoaderOptionsPlugin({
+            debug: true
+        }),
+        
 
     ],
     module: {
@@ -56,6 +61,7 @@ module.exports = {
                 "sass-loader" // compiles Sass to CSS
                 ]
             }
-        ]
+        ],
+        
     }
 };

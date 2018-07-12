@@ -1,21 +1,27 @@
 {
    
   "0": {
-          "name":"Chicken Biryani 21",
-          "price":"510",
-"description":"Chicken Biryani served with basmati rice and our secret 21 herbs"
+			"id":"#2015",
+			"name":"Chicken Biryani 21",
+			"price":"510",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg"
           
         },
   "1": {
-          "name":"Chicken Biryani 21",
-          "price":"700",
-"description":"Chicken Biryani served with basmati rice and our secret 21 herbs"
+			"id":"#2016",
+			"name":"Chicken Biryani 21",
+			"price":"700",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg"
           
         },
   "2": {
-          "name":"Chicken Biryani 21",
-          "price":"900",
-"description":"Chicken Biryani served with basmati rice and our secret 21 herbs"
+			"id":"#2017",
+			"name":"Chicken Biryani 21",
+			"price":"900",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg"
           
         }
 }
