@@ -1,6 +1,12 @@
 import {
     selector
 } from '../../common/common.js';
+import {
+    Category
+} from '../models/Category';
+import {
+    categoryTemplate
+} from '../templates/category';
 
 const selectCategory = (e) => {
     selector.category().forEach((ele) => {
@@ -26,6 +32,39 @@ const selectCategory = (e) => {
 
 };
 
+const fetchCategories = () => {
+    var tmp = [];
+    $.ajax({
+        url: '/static/categories.json',
+        datatype: "json",
+        async: false,
+        success: function (items) {
+            items = Object.values(items);
+            for (let i = 0; i < items.length; i++) {
+                tmp.push(new Category(items[i].id, items[i].name, items[i].imgsrc));
+            }
+        }
+    });
+    return tmp;
+}
+
+export const allCategoriesDom = () => {
+    
+    let _allcategories = '';
+    fetchCategories().forEach((cat) =>{
+        _allcategories += categoryTemplate(cat);
+    });
+    return _allcategories;
+};
+
+const populateData = () => {
+    selector.categories_ul().innerHTML = '';
+    selector.categories_ul().insertAdjacentHTML("afterbegin", allCategoriesDom());
+}
+
 export const category = {
-    selectCategory: selectCategory
+    selectCategory: selectCategory,
+    populateData: populateData,
+    allCategoriesDom : allCategoriesDom,
+    fetchCategories : fetchCategories
 }

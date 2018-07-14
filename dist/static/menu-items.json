@@ -3,25 +3,141 @@
   "0": {
 			"id":"#2015",
 			"name":"Chicken Biryani 21",
-			"price":"1510",
+			"price":"510",
 			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
-			"imgsrc":"static/Chicken-Biryani.jpg"
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#101",
+			"tags":"biryani,chicken"
           
         },
   "1": {
 			"id":"#2016",
 			"name":"Chicken Biryani 21",
-			"price":"1700",
+			"price":"7001",
 			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
-			"imgsrc":"static/Chicken-Biryani.jpg"
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#102,#103",
+			"tags":"biryani,chicken"
           
         },
   "2": {
 			"id":"#2017",
 			"name":"Chicken Biryani 21",
-			"price":"1900",
+			"price":"9001",
 			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
-			"imgsrc":"static/Chicken-Biryani.jpg"
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#101,#102,#103",
+			"tags":"biryani,chicken"
+          
+        },
+  "3": {
+			"id":"#2018",
+			"name":"Chicken Biryani 21",
+			"price":"900",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#102,#105",
+			"tags":"biryani,chicken"
+          
+        },
+  "4": {
+			"id":"#2019",
+			"name":"Chicken Biryani 21",
+			"price":"9002",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#104,#105",
+			"tags":"biryani,chicken"
+          
+        },
+  "5": {
+			"id":"#2020",
+			"name":"Chicken Biryani 21",
+			"price":"9005",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#101,#103",
+			"tags":"biryani,chicken"
+          
+        },
+  "6": {
+			"id":"#2021",
+			"name":"Chicken Biryani 21",
+			"price":"9009",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#104,#102",
+			"tags":"biryani,chicken"
+          
+        },
+  "7": {
+			"id":"#2022",
+			"name":"Chicken Biryani 21",
+			"price":"9008",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#101,#103",
+			"tags":"biryani,chicken"
+          
+        },
+  "8": {
+			"id":"#2023",
+			"name":"Chicken Biryani 21",
+			"price":"9007",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#103,#105",
+			"tags":"biryani,chicken"
+          
+        },
+  "9": {
+			"id":"#2024",
+			"name":"Chicken Biryani 21",
+			"price":"9006",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#103,#105,#104,#101",
+			"tags":"biryani,chicken"
+          
+        },
+  "10": {
+			"id":"#2025",
+			"name":"Chicken Biryani 21",
+			"price":"9005",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#103",
+			"tags":"biryani,chicken"
+          
+        },
+  "11": {
+			"id":"#2026",
+			"name":"Chicken Biryani 21",
+			"price":"9034",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#105",
+			"tags":"biryani,chicken"
+          
+        },
+  "12": {
+			"id":"#2027",
+			"name":"Chicken Biryani 21",
+			"price":"6700",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#103",
+			"tags":"biryani,chicken"
+          
+        },
+  "13": {
+			"id":"#2028",
+			"name":"Chicken Biryani 21",
+			"price":"9040",
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"static/Chicken-Biryani.jpg",
+			"categoryid":"#104",
+			"tags":"biryani,chicken"
           
         }
 }

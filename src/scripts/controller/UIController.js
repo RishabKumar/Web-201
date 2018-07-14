@@ -6,7 +6,7 @@ import {
     selector
 } from '../common/common.js';
 
-
+/*/
 class EventBinder {
 
     constructor(page) {
@@ -20,6 +20,15 @@ class EventBinder {
 
             selector.rightarrow().addEventListener('click', home.carousel.moveRight);
             selector.leftarrow().addEventListener('click', home.carousel.moveLeft);
+
+            selector.lazyimg().forEach((img => {
+                home.lazyBind(img);
+            }));
+            window.addEventListener('scroll', function () {
+                selector.lazyimg().forEach((img => {
+                    home.lazyBind(img);
+                }));
+            });
 
         }
     }
@@ -37,27 +46,16 @@ class PopulateData {
     }
 }
 
-
+/*/
 export class UIController {
     constructor(page) {
         this.page = page;
     }
 
     init() {
-        const eb = new EventBinder(this.page);
-        eb.bindEvents();
-        const pd = new PopulateData(this.page);
-        pd.populateData();
-        selector.lazyimg().forEach((img => {
-                home.lazyBind(img);
-            }));
-        window.addEventListener('scroll', function () {
-            selector.lazyimg().forEach((img => {
-                home.lazyBind(img);
-            }));
-        });
-
-
+        if (this.page === 'home') {
+            home.init();
+        }
     }
 
 

@@ -158,10 +158,10 @@ header {
             height: 20px;
             transform: translate(-15px, 5px);
         }
-        input[type='radio']:checked{
+        input[type='radio']:checked {
             border: 3px solid #1c3fd1;
         }
-        .label{
+        .label {
             transform: translateX(10px);
         }
         a {
@@ -280,25 +280,65 @@ section:target::before {
 
 .search-bar {
     margin: 5% 2% 0% 2%;
+    position: relative;
+
+    .search-bar-input {
+        position: relative;
+        width: 90%;
+    }
     input {
-        width: 100%;
+        width: 95%;
         border-radius: 30px;
         border-style: groove;
         height: 35px;
         padding: 20px;
+        z-index: 900;
+        position: absolute;
     }
     input:focus {
         outline: none;
+        background-color: #fff;
     }
 
-    .search-result {
+    .search-results {
+        position: absolute;
         border-style: groove;
+        border-width: 2px;
         overflow-y: auto;
         max-height: 200px;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
         margin-top: 2px;
-        display: none;
+        top: 35px;
+        width: 80%;
+        z-index: 800;
+        background-color: #fff;
+    }
+    .search-results > * {
+        padding: 5px;
+        a {
+            text-decoration: none;
+            color: #504d4d;
+        }
+
+    }
+    .search-result:hover {
+        background-color: rgba(247, 169, 25, 0.5);
+    }
+    img {
+        z-index: 900;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(1.2);
+        }
+    }
+    .close-icon {
+        margin-right: -30px;
     }
 
 }
