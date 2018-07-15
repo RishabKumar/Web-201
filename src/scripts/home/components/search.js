@@ -25,11 +25,19 @@ const searchForInput = (e) => {
 }
 
 const searchAndGetAll = () => {
-    searchKeys(menuItems.populateSearchData);
     clearSearch();
+    selector.searchresultsection().style = ';display:block;';
+    selector.searchresultsectionmenuitems().innerHTML = '';
+    searchKeys(menuItems.populateSearchData, NoResultFound);
+    window.scrollBy(0,1);
 }
 
-const searchKeys = (fn) => {
+const NoResultFound = () => {
+    selector.searchresultsectionmenuitems().innerHTML = '<span style="margin-left:5%">No Result Found.<span>';
+}
+
+const searchKeys = (fn, failfn) => {
+    let flag = false;
     if (selector.searchbar().value.length > 0) {
         index.forEach((value, key) => {
             const reg1 = new RegExp("(.*)" + selector.searchbar().value.toLowerCase() + "(.*)");
@@ -37,9 +45,13 @@ const searchKeys = (fn) => {
             if (reg1.test(key.toLowerCase()) || reg2.test(selector.searchbar().value.toLowerCase())) {
                 value.forEach((menuitem) => {
                     fn(menuitem);
+                    flag = true;
                 })
             }
         });
+    }
+    if(!flag){
+        failfn();
     }
 }
 
@@ -72,7 +84,9 @@ const generateMenuIndex = function () {
 };
 
 const clearSearch = () => {
+    
     selector.searchresults().innerHTML = '';
+    selector.searchresultsection().style = ';display:none;';
 }
 
 export const search = {

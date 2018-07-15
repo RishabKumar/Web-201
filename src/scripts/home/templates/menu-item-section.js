@@ -19,6 +19,7 @@ export const menuItemSectionTemplate = (cat, menuitems) =>{
 }
 
 const transformMenuItems = (menuitems) => {
+    
     let final = '';
     menuitems.forEach((item) => final+=menuItemTemplate(item));
     return final;

@@ -7,6 +7,9 @@ import {
 import {
     categoryTemplate
 } from '../templates/category';
+import {
+    Common
+} from '../../common/common';
 
 const selectCategory = (e) => {
     selector.category().forEach((ele) => {
@@ -33,25 +36,27 @@ const selectCategory = (e) => {
 };
 
 const fetchCategories = () => {
-    var tmp = [];
-    $.ajax({
-        url: '/static/categories.json',
-        datatype: "json",
-        async: false,
-        success: function (items) {
-            items = Object.values(items);
-            for (let i = 0; i < items.length; i++) {
-                tmp.push(new Category(items[i].id, items[i].name, items[i].imgsrc));
-            }
-        }
-    });
+    let tmp = [];
+    let items = Common.fetchItems('categories.json');
+    for (let i = 0; i < items.length; i++) {
+        tmp.push(new Category(items[i].id, items[i].name, items[i].imgsrc));
+    }
+    return tmp;
+}
+
+const fetchCategories2 = () => {
+    let tmp = [];
+    let items = Common.fetchItems('categories2.json');
+    for (let i = 0; i < items.length; i++) {
+        tmp.push(new Category(items[i].id, items[i].name));
+    }
     return tmp;
 }
 
 export const allCategoriesDom = () => {
-    
+
     let _allcategories = '';
-    fetchCategories().forEach((cat) =>{
+    fetchCategories().forEach((cat) => {
         _allcategories += categoryTemplate(cat);
     });
     return _allcategories;
@@ -65,6 +70,7 @@ const populateData = () => {
 export const category = {
     selectCategory: selectCategory,
     populateData: populateData,
-    allCategoriesDom : allCategoriesDom,
-    fetchCategories : fetchCategories
+    allCategoriesDom: allCategoriesDom,
+    fetchCategories: fetchCategories,
+    fetchCategories2: fetchCategories2
 }

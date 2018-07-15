@@ -11,22 +11,24 @@ import {
     selector
 } from '../../common/common';
 import {
+    Common
+} from '../../common/common';
+import {
     category
 } from './category';
+import {
+    CartItem
+} from '../../orders/models/CartItem';
+import {
+    Cart
+} from '../../orders/components/cart';
 
 const fetchMenuItems = function () {
-    var tmp = [];
-    $.ajax({
-        url: '/static/menu-items.json',
-        datatype: "json",
-        async: false,
-        success: function (items) {
-            items = Object.values(items);
-            for (let i = 0; i < items.length; i++) {
-                tmp.push(new MenuItem(items[i].id, items[i].name, items[i].price, items[i].description, items[i].imgsrc, items[i].categoryid, items[i].tags));
-            }
-        }
-    });
+    let items = Common.fetchItems('menu-items.json');
+    let tmp = [];
+    for (let i = 0; i < items.length; i++) {
+        tmp.push(new MenuItem(items[i].id, items[i].name, items[i].price, items[i].description, items[i].imgsrc, items[i].splcategoryid, items[i].categoryid, items[i].tags));
+    }
     return tmp;
 };
 
@@ -34,12 +36,31 @@ const populateData = () => {
     selector.menuitemcontainer().insertAdjacentHTML('beforeend', menuItemSectionDom());
 }
 
+const populateFullMenuData = () => {
+    selector.fullmenudiv().insertAdjacentHTML('beforeend', fullMenuItemSectionDom());
+}
+
 const populateSearchData = (item) => {
-    selector.searchresultsection().insertAdjacentHTML('beforeend', menuItemTemplate(item));
+    selector.searchresultsectionmenuitems().insertAdjacentHTML('beforeend', menuItemTemplate(item));
 }
 
 const menuItemSectionDom = () => {
     const c = category.fetchCategories();
+    const cat_menuitem_map = new Map();
+    const menuitems = fetchMenuItems();
+    c.forEach((cat) => {
+        const item_arr = menuitems.filter(item => item.splcategoryid.includes(cat.id));
+        cat_menuitem_map.set(cat, item_arr);
+    });
+    let final = '';
+    cat_menuitem_map.forEach((value, key) => {
+        final += menuItemSectionTemplate(key, value);
+    });
+    return final;
+};
+
+const fullMenuItemSectionDom = (categories) => {
+    const c = category.fetchCategories2();
     const cat_menuitem_map = new Map();
     const menuitems = fetchMenuItems();
     c.forEach((cat) => {
@@ -53,8 +74,60 @@ const menuItemSectionDom = () => {
     return final;
 };
 
+const selectSize = (e) => {
+    if (e.target.className === 'halfSize') {
+        let h = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-half');
+        h.style = 'display:inline-block;';
+        let f = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-full');
+        f.style = 'display:none;';
+    } else if (e.target.className === 'fullSize') {
+        let h = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-half');
+        h.style = 'display:none;';
+        let f = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-full');
+        f.style = 'display:inline-block;';
+    }
+}
+
+const reduceQty = (e) => {
+    e.preventDefault();
+    let input = e.target.parentElement.querySelector('input.item-qty');
+    if (parseInt(input.value) > 0)
+        input.value = parseInt(input.value) - 1;
+}
+
+const increaseQty = (e) => {
+    e.preventDefault();
+    let input = e.target.parentElement.querySelector('input.item-qty');
+    if (parseInt(input.value) < 5)
+        input.value = parseInt(input.value) + 1;
+}
+
+const getSelectedItem = (e) => {
+    const ele = e.target.parentElement.parentElement.querySelector('input[type="radio"]:checked');
+    let size = 'f';
+    if (ele !== null) {
+        size = ele.value;
+    }
+    if (size === null) {
+        size = 'f';
+    }
+    let qty = e.target.parentElement.parentElement.querySelector('input.item-qty').value;
+    if (qty == '0') {
+        qty = '1';
+    }
+    const id = e.target.parentElement.parentElement.parentElement.parentElement.id;
+
+    Cart.addToCart(size, qty, id);
+}
+
 export const menuItems = {
     populateData: populateData,
     menuItemSectionDom: menuItemSectionDom,
-    populateSearchData: populateSearchData
+    populateSearchData: populateSearchData,
+    populateFullMenuData: populateFullMenuData,
+    fullMenuItemSectionDom: fullMenuItemSectionDom,
+    selectSize: selectSize,
+    reduceQty: reduceQty,
+    increaseQty: increaseQty,
+    getSelectedItem: getSelectedItem
 }

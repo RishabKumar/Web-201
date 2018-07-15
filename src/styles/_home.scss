@@ -78,7 +78,9 @@ header {
     @include xheight($headerheight_s);
 }
 
-.container {}
+.container {
+    background-image: url(/static/bg.png);
+}
 
 .menu-container {
     margin-left: 5%;
@@ -102,6 +104,11 @@ header {
 .full-menu {
     .menu-item {
         flex-basis: 23%;
+    }
+    & > h2 {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
     }
 }
 
@@ -172,6 +179,9 @@ header {
     h3 {
         text-align: center;
     }
+    .price-half {
+        display: none;
+    }
 }
 
 .menu-item-container {
@@ -212,6 +222,7 @@ header {
 
 .category {
     // margin: 0 5% 0% 5%;
+    background-color: #fff;
     margin-bottom: 0;
     h2 {
         margin-left: 2%;
@@ -231,10 +242,12 @@ section:target::before {
 .categories {
     top: 8vh;
     position: -webkit-sticky;
+    position: -webkit-sticky;
     position: sticky; //min-width: 200px;
     box-shadow: 1px 3px 5px #9998a2;
     @include xheight(85);
     display: flex;
+    background-color: #fff;
     flex-direction: column;
     justify-content: space-around;
     .mobile-category-icon {
@@ -278,7 +291,13 @@ section:target::before {
     img {}
 }
 
+.search-result-section {
+    display: none;
+}
+
 .search-bar {
+    background-color: #fff;
+    padding-top: 20px;
     margin: 5% 2% 0% 2%;
     position: relative;
 
@@ -432,6 +451,7 @@ section:target::before {
     }
 
     .menu-item-container {
+        background-color: #fff;
         margin: 0 auto;
         padding: 0;
     }
