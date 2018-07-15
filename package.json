@@ -7,6 +7,7 @@
         "build": "webpack --mode development",
         "buildpro": "webpack --mode production",
         "dev": "webpack-dev-server  --mode development",
+        "devpro": "webpack-dev-server  --mode production",
         "sass": "node-sass src/styles/main.scss dist/min.css --watch"
     },
     "keywords": [],
