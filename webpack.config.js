@@ -20,8 +20,8 @@ module.exports = {
             template: './src/pages/index.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'orders.html',
-            template: './src/pages/orders.html'
+            filename: 'cart.html',
+            template: './src/pages/cart.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'checkout.html',

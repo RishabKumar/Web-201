@@ -18,10 +18,10 @@ import {
 } from './category';
 import {
     CartItem
-} from '../../orders/models/CartItem';
+} from '../../cart/models/CartItem';
 import {
     Cart
-} from '../../orders/components/cart';
+} from '../../cart/components/cart';
 
 const fetchMenuItems = function () {
     let items = Common.fetchItems('menu-items.json');
