@@ -1,8 +1,5 @@
-import {HomeController} from './HomeController';
+import {
+    HomeController
+} from './HomeController';
 
-
-export const home =  new HomeController();
-
-
-
- 
+export const home = new HomeController();

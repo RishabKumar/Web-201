@@ -1,10 +1,9 @@
 import {
     home
 } from '../home/index.js';
-
 import {
-    selector
-} from '../common/common.js';
+    cart
+} from '../cart/index.js';
 
 /*/
 class EventBinder {
@@ -53,8 +52,12 @@ export class UIController {
     }
 
     init() {
-        if (this.page === 'home') {
+
+        if (this.page === 'index') {
             home.init();
+        }
+        if (this.page === 'cart') {
+            cart.init();
         }
     }
 

@@ -1,5 +1,6 @@
 import {UIController} from './UIController.js';
+import {Route} from './../routes/routes.js';
 
  
-let ui = new UIController('home');
+let ui = new UIController(Route.getPage());
 ui.init();
