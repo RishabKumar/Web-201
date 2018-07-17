@@ -6,6 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: ['babel-polyfill', './src/index.js'],
+    
 
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,7 +42,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             debug: true
         }),
-        
+
 
     ],
     module: {
@@ -56,12 +57,34 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
+                    /*/
                 "style-loader", // creates style nodes from JS strings
                 "css-loader", // translates CSS into CommonJS
                 "sass-loader" // compiles Sass to CSS
+                /*/
+
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: "css-loader",
+                            options: {
+                                minimize: {
+                                    safe: true
+                                }
+                            }
+                        },
+
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                minimize: {
+                                    safe: true
+                                }
+                                
+                            }
+                        }
                 ]
             }
         ],
-        
+
     }
 };

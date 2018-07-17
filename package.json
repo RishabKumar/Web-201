@@ -6,9 +6,10 @@
     "scripts": {
         "build": "webpack --mode development",
         "buildpro": "webpack --mode production",
-        "dev": "webpack-dev-server  --mode development",
+        "dev": "webpack-dev-server --https --mode development",
         "devpro": "webpack-dev-server  --mode production",
-        "sass": "node-sass src/styles/main.scss dist/min.css --watch"
+        "sass": "node-sass src/styles/main.scss dist/min.css --watch",
+        "serve":  "webpack-serve ./webpack.config.js --no-reload"
     },
     "keywords": [],
     "author": "",
@@ -28,7 +29,8 @@
         "webpack": "^4.14.0",
         "webpack-cli": "^2.1.5",
         "webpack-dev-server": "^3.1.4",
-        "webpack-merge": "^4.1.3"
+        "webpack-merge": "^4.1.3",
+        "webpack-serve": "^2.0.2"
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
