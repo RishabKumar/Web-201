@@ -52,12 +52,16 @@ export class UIController {
     }
 
     init() {
-
-        if (this.page === 'index') {
-            home.init();
-        }
-        if (this.page === 'cart') {
-            cart.init();
+        switch (this.page) {
+            case 'cart':
+                {
+                    cart.init();
+                    break;
+                }
+            default: {
+                home.init();
+                break;
+            }
         }
     }
 

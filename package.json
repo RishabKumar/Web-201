@@ -6,7 +6,7 @@
     "scripts": {
         "build": "webpack --mode development",
         "buildpro": "webpack --mode production",
-        "dev": "webpack-dev-server --https --mode development",
+        "dev": "webpack-dev-server --mode development",
         "devpro": "webpack-dev-server  --mode production",
         "sass": "node-sass src/styles/main.scss dist/min.css --watch",
         "serve":  "webpack-serve ./webpack.config.js --no-reload"

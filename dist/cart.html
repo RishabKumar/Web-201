@@ -1,5 +1,118 @@
 <html>
 
 
-Orders
-</html><script type="text/javascript" src="main.bundle.js"></script>
+<head>
+    <title>
+        FOODIE - CART
+    </title>
+    <link href="min.css" rel="stylesheet">
+<link href="min.css" rel="stylesheet"></head>
+
+<body>
+
+    <header class='header-height-l'>
+        <div class='logo'>
+            <img src='https://www.nusu.co.uk/asset/Organisation/6583/Logo%20cropped.png?thumbnail_width=480&thumbnail_height=480&resize_type=ResizeWidth'>
+        </div>
+        <nav>
+            <ul>
+                <li><a href='index.html'>Menu</a></li>
+                <li><a href='cart.html'>Cart(<span class='cart-count'>0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class='cart-container'>
+        <div class='col-8 auto-margin'>
+            <h2>Cart</h2>
+        </div>
+        <section class='col-8 auto-margin'>
+            <ol class='cart-items'>
+                <li>
+                    <div class='cart-item'>
+                        <div class='cart-item-img'>
+                            <div>
+                                <img src='static/Chicken-Biryani.jpg'>
+                            </div>
+                        </div>
+                        <div class='cart-item-desc'>
+                            <div>
+                                <h3>BIRYANI</h3>
+                            </div>
+                            <div class='size-container'>
+                                <span class="label">
+                            <h3>
+                                H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
+                            </h3>
+                        </span>
+                            </div>
+                            <div class='item-price'>
+                                <h3><span>Rs 500.0</span></h3>
+                            </div>
+
+                        </div>
+                        <div class='item-qty'>
+                            <span>
+                        <a href='#'>-</a>
+                        <input type='text' readonly value='0'>
+                        <a href='#'>+</a>
+                    </span>
+                        </div>
+                        <div class='remove-item'>
+                            <button>REMOVE</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='cart-item'>
+                        <div class='cart-item-img'>
+                            <div>
+                                <img src='static/Chicken-Biryani.jpg' width='100%'>
+                            </div>
+                        </div>
+                        <div class='cart-item-desc'>
+                            <div>
+                                <h3>BIRYANI</h3>
+                            </div>
+                            <div class='size-container'>
+                                <span class="label">
+                            <h3>
+                                H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
+                            </h3>
+                        </span>
+                            </div>
+                            <div class='item-price'>
+                                <h3><span>Rs 500.0</span></h3>
+                            </div>
+
+                        </div>
+                        <div class='item-qty'>
+                            <span>
+                        <a href='#'>-</a>
+                        <input type='text' readonly value='0'>
+                        <a href='#'>+</a>
+                    </span>
+                        </div>
+                        <div class='remove-item'>
+                            <button>REMOVE</button>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+
+        </section>
+
+    </section>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="main.bundle.js"></script></body>
+
+</html>
