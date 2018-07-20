@@ -14,8 +14,8 @@
 .cart-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 10px;
+    grid-row-gap: 10%;
+    grid-column-gap: 5%;
     padding: 1%;
     @include xheight(23);
     button {
@@ -48,7 +48,7 @@ input {
 
 .size-container {
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 2%;
     input[type='radio'] {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -90,4 +90,45 @@ a {
 .item-price {
     position: absolute;
     bottom: 0;
+}
+
+
+.checkout-btn {
+    position: fixed;
+    top: 90vh;
+    right: 5%;
+    transform: skew(-20deg);
+    @include xheight(5); 
+    background: green;
+    color: #000;
+    div{
+        transform: skew(20deg);
+    }
+    
+}
+
+
+@media (max-width: 1000px) {
+    .size-container {
+        input[type='radio'] {
+            width: 50px;
+            height: 50px;
+            transform: translate(-40px, 8px);
+        }
+    }
+
+    .remove-item button {
+        @include setFont(.5, 400);
+        padding: 4%;
+    }
+
+    li {
+        @include setFont(.5, 400);
+    }
+
+    .cart-item {
+        grid-column-gap: 10%;
+
+    }
+
 }
