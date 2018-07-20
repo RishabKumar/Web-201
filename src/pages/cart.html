@@ -6,6 +6,7 @@
         FOODIE - CART
     </title>
     <link href="min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,12 +22,13 @@
             </ul>
         </nav>
     </header>
-
+    <div class='col-12 checkout-container'>
+        <button class='checkout-btn'>
+                    CHECKOUT
+        </button>
+    </div>
 
     <section class='cart-container'>
-        <a href='#' class='checkout-btn'>
-            <div><h4>CHECKOUT</h4></div>
-        </a>
         <div class='col-9 auto-margin'>
             <h2>Cart</h2>
         </div>
@@ -44,11 +46,11 @@
                                 <h3>BIRYANI</h3>
                             </div>
                             <div class='size-container'>
-                                <span class="label">
-                            <h3>
-                                H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                            </h3>
-                        </span>
+                            <span class="label">
+                                <h3>
+                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
+                                </h3>
+                            </span>
                             </div>
                             <div class='item-price'>
                                 <h3><span>Rs 500.0</span></h3>
@@ -68,7 +70,7 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
                 <li>
                     <div class='cart-item'>
@@ -106,7 +108,7 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
                 <li>
                     <div class='cart-item'>
@@ -144,7 +146,7 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
                 <li>
                     <div class='cart-item'>
@@ -182,7 +184,7 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
                 <li>
                     <div class='cart-item'>
@@ -220,7 +222,7 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
                 <li>
                     <div class='cart-item'>
@@ -258,15 +260,23 @@
                             <button>REMOVE</button>
                         </div>
                     </div>
-                        <hr>
+                    <hr>
                 </li>
-               
+
             </ol>
 
 
         </section>
-        
     </section>
+
+
+    <div class='col-12 checkout-container'>
+        <button class='checkout-btn'>
+                    CHECKOUT
+        </button>
+    </div>
+
+
 
 
 

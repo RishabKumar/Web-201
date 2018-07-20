@@ -4,6 +4,9 @@ import {
 import {
     cart
 } from '../cart/index.js';
+import {
+    Header
+} from '../common/header.js';
 
 /*/
 class EventBinder {
@@ -52,16 +55,19 @@ export class UIController {
     }
 
     init() {
+        window.addEventListener('scroll', Header.reduceHeaderOnScroll);
+        window.addEventListener('load', Header.reduceHeaderOnScroll);
         switch (this.page) {
             case 'cart':
                 {
                     cart.init();
                     break;
                 }
-            default: {
-                home.init();
-                break;
-            }
+            default:
+                {
+                    home.init();
+                    break;
+                }
         }
     }
 

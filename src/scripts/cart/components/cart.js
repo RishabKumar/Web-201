@@ -1,9 +1,13 @@
 import {
     Common
 } from '../../common/common';
+import {
+    CartItem
+} from '../models/CartItem';
 
 const addToCart = (size, qty, itemid) => {
     const item = {
+        "id": Math.random(),
         "size": size,
         "qty": qty,
         "itemid": itemid
@@ -29,13 +33,12 @@ const loadFromCart = () => {
         return null;
     } else {
         itemArr = JSON.parse(itemstr);
-        const validItems = Common.fetchItems('menu-items.json');
-        itemArr.filter((item) => {
-            return validItems().find((t) => item.itemid === t.id);
-        });
-        return itemArr.map((item) => {
-            if (item !== null || item !== undefined) {
-                return new CartItem(validItem, item.size, item.qty);
+        let validItems = Common.fetchItems('menu-items.json');
+        return itemArr.map((cartitem) => {
+      //      debugger;
+            let validItem = validItems.find((t) => cartitem.itemid === t.id);
+            if (validItem !== null && validItem !== undefined) {
+                return new CartItem(validItem, cartitem.id, cartitem.size, cartitem.qty);
             }
         });
     }

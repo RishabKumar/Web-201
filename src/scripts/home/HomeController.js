@@ -5,9 +5,6 @@ import {
     carousel
 } from './components/carousel.js';
 import {
-    header
-} from './components/header.js';
-import {
     menuItems
 } from './components/menuitem.js';
 import {
@@ -45,8 +42,6 @@ export class HomeController {
 
 const bindWindowEvents = () => {
     window.addEventListener('scroll', category.selectCategory);
-    window.addEventListener('scroll', header.reduceHeaderOnScroll);
-    window.addEventListener('load', header.reduceHeaderOnScroll);
     window.addEventListener('scroll', function () {
         selector.lazyimg().forEach((img => {
             lazyBind(img);

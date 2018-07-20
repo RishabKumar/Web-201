@@ -19,11 +19,14 @@ export const selector = (function () {
         "searchIcon": () => document.querySelector('.search-icon'),
         "closeIcon": () => document.querySelector('.close-icon'),
         "fullmenudiv": () => document.querySelector('.full-menu div'),
-        "itemSize": () => document.querySelectorAll('input[name=size]'),
+       // "itemSize": () => document.querySelectorAll('input[name=size]'),
+        "itemSize": () => document.querySelectorAll('.fullsize,.halfSize'),
         "reduceQty": () => document.querySelectorAll('a.reduce-qty'),
         "increaseQty": () => document.querySelectorAll('a.increase-qty'),
         "addtocartbtn": () => document.querySelectorAll('button.add-to-cart-btn'),
         "cartcount": () => document.querySelector('.cart-count'),
+        "cartcounts": () => document.querySelector('ol.cart-items'),
+        "cartprice": () => document.querySelectorAll('.item-price span'),
     };
 })();
 

@@ -1,10 +1,11 @@
 import {
     selector
-} from '../../common/common.js';
+} from './common';
 
 
-export const header = {
-    reduceHeaderOnScroll: () => {
+export class Header {
+
+    static reduceHeaderOnScroll() {
 
         if (Math.floor(window.scrollY) > 10) {
             selector.header().className = 'header-height-s';
@@ -12,4 +13,5 @@ export const header = {
             selector.header().className = 'header-height-l';
         }
     }
-};
+
+}

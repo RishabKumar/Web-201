@@ -1,6 +1,7 @@
 export class CartItem{
-    constructor(item, size, qty)
+    constructor(item, id, size, qty)
     {
+        this.id = id;
         this.item = item;
         this.qty = qty;
         this.size = size;
