@@ -7,6 +7,9 @@ export const menuItemTemplate = (item) => {
                                     <h4>
                                         <span class='description'>${item.description}</span>
                                     </h4>
+                                    <div class='add-btn-dummy-container'>
+                                        <button><h4>Add<h4></button>
+                                    </div>
                                     <div class='add-to-cart-container'>
                                         <div>
                                             <h4><span class='label'>PRICE</span>

@@ -103,6 +103,7 @@ const increaseQty = (e) => {
 }
 
 const getSelectedItem = (e) => {
+    e.preventDefault();
     const ele = e.target.parentElement.parentElement.querySelector('input[type="radio"]:checked');
     let size = 'f';
     if (ele !== null) {
@@ -116,8 +117,19 @@ const getSelectedItem = (e) => {
         qty = '1';
     }
     const id = e.target.parentElement.parentElement.parentElement.parentElement.id;
+    if (id != undefined && id.length > 0) {
+        Cart.addToCart(size, qty, id);
+    }
+}
 
-    Cart.addToCart(size, qty, id);
+//added for accessibility
+const showAddToCart = (e) => {
+    e.target.parentElement.nextElementSibling.style = 'transform: scaleY(1);';
+}
+
+//added for accessibility
+const hideAddToCart = (e) => {
+    e.target.parentElement.nextElementSibling.style = 'transform: scaleY(0);';
 }
 
 export const menuItems = {
@@ -129,5 +141,6 @@ export const menuItems = {
     selectSize: selectSize,
     reduceQty: reduceQty,
     increaseQty: increaseQty,
-    getSelectedItem: getSelectedItem
+    getSelectedItem: getSelectedItem,
+    showAddToCart: showAddToCart
 }

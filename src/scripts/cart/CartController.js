@@ -2,6 +2,9 @@ import {
     cartitems
 } from './components/cartitems';
 import {
+    subtotal
+} from './components/subtotal';
+import {
     selector
 } from './../common/common';
 
@@ -12,7 +15,7 @@ export class CartController {
     }
 
     bindWindowEvents() {
-
+        window.addEventListener('load', subtotal.populateCartItems);
     }
 
     bindComponentEvents() {
@@ -26,6 +29,9 @@ export class CartController {
         
         selector.itemSize().forEach((size) => {
             size.addEventListener('click', cartitems.selectSize);
+        });
+        selector.removeItem().forEach((btn) => {
+            btn.addEventListener('click', cartitems.removeItem);
         });
     }
 

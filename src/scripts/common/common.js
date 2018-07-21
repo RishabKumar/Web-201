@@ -12,6 +12,7 @@ export const selector = (function () {
         "menuitems": () => document.querySelector('.menu-items'),
         "lazyimg": () => document.querySelectorAll('img[lazy-img-src]'),
         "menuitemcontainer": () => document.querySelector('.menu-item-container'),
+        "adddummybtn": () => document.querySelectorAll('.add-btn-dummy-container button'),
         "searchbar": () => document.querySelector('.search-bar input'),
         "searchresults": () => document.querySelector('.search-results'),
         "searchresultsection": () => document.querySelector('.search-result-section'),
@@ -23,10 +24,12 @@ export const selector = (function () {
         "itemSize": () => document.querySelectorAll('.fullsize,.halfSize'),
         "reduceQty": () => document.querySelectorAll('a.reduce-qty'),
         "increaseQty": () => document.querySelectorAll('a.increase-qty'),
+        "removeItem": () => document.querySelectorAll('.remove-item'),
         "addtocartbtn": () => document.querySelectorAll('button.add-to-cart-btn'),
         "cartcount": () => document.querySelector('.cart-count'),
         "cartcounts": () => document.querySelector('ol.cart-items'),
         "cartprice": () => document.querySelectorAll('.item-price span'),
+        "subtotalcontainer": () => document.querySelector('.subtotal-container div'),
     };
 })();
 

@@ -12,13 +12,13 @@ export const cartItemTemplate = (cartItem) => {
                             </div>
                             <div class='size-container'>
                                 <span class="label">
-                            <h3>
+                             
                                 ${getItemAvailableSizes(cartItem)}
-                            </h3>
+                             
                         </span>
                             </div>
                             <div class='item-price'>
-                                <h3><span>${cartItem.price}</span></h3>
+                                 <span>₹${cartItem.price}</span> 
                             </div>
 
                         </div>
@@ -35,7 +35,6 @@ export const cartItemTemplate = (cartItem) => {
                             <button>REMOVE</button>
                         </div>
                     </div>
-                    <hr>
                 </li>`;
 }
 

@@ -47,7 +47,6 @@ const bindWindowEvents = () => {
             lazyBind(img);
         }));
     });
-    window.addEventListener('load', Common.setCartCount);
 }
 
 const bindComponentEvents = () => {
@@ -59,21 +58,23 @@ const bindComponentEvents = () => {
     }));
     selector.searchIcon().addEventListener('click', search.searchAndGetAll);
     selector.closeIcon().addEventListener('click', search.clearSearch);
+    selector.adddummybtn().forEach((t) => t.addEventListener('focusin', menuItems.showAddToCart));
+    selector.adddummybtn().forEach((t) => t.addEventListener('focusout', menuItems.hideAddToCart));
     
-        
-    selector.itemSize().forEach((size)=>{
-       size.addEventListener('click', menuItems.selectSize); 
+
+    selector.itemSize().forEach((size) => {
+        size.addEventListener('click', menuItems.selectSize);
     });
-    
-    selector.reduceQty().forEach((t)=>{
-       t.addEventListener('click', menuItems.reduceQty); 
+
+    selector.reduceQty().forEach((t) => {
+        t.addEventListener('click', menuItems.reduceQty);
     });
-    selector.increaseQty().forEach((t)=>{
-       t.addEventListener('click', menuItems.increaseQty); 
+    selector.increaseQty().forEach((t) => {
+        t.addEventListener('click', menuItems.increaseQty);
     });
-    selector.addtocartbtn().forEach((t)=>{
-       t.addEventListener('click', menuItems.getSelectedItem); 
+    selector.addtocartbtn().forEach((t) => {
+        t.addEventListener('click', menuItems.getSelectedItem);
     });
-    
+
     //selector.cartcount()
 }

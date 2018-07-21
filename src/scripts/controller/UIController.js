@@ -7,6 +7,9 @@ import {
 import {
     Header
 } from '../common/header.js';
+import {
+    Common
+} from '../common/common.js';
 
 /*/
 class EventBinder {
@@ -57,6 +60,7 @@ export class UIController {
     init() {
         window.addEventListener('scroll', Header.reduceHeaderOnScroll);
         window.addEventListener('load', Header.reduceHeaderOnScroll);
+        window.addEventListener('load', Common.setCartCount);
         switch (this.page) {
             case 'cart':
                 {
