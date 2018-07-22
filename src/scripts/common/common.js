@@ -30,6 +30,7 @@ export const selector = (function () {
         "cartcounts": () => document.querySelector('ol.cart-items'),
         "cartprice": () => document.querySelectorAll('.item-price span'),
         "subtotalcontainer": () => document.querySelector('.subtotal-container div'),
+        "proceed": () => document.querySelector('.accordian-container a'),
     };
 })();
 
