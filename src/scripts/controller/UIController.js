@@ -10,6 +10,9 @@ import {
 import {
     Common
 } from '../common/common.js';
+import {
+    checkout
+} from './../checkout/index.js';
 
 /*/
 class EventBinder {
@@ -65,6 +68,11 @@ export class UIController {
             case 'cart':
                 {
                     cart.init();
+                    break;
+                }
+            case 'checkout':
+                {
+                    checkout.init();  
                     break;
                 }
             default:

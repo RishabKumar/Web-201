@@ -5,7 +5,7 @@ export const subtotalTemplate = (cartItems) => {
         }
         return Number.parseInt(acc) + (Number.parseInt(value.price) * Number.parseInt(value.qty));
     }) : cartItems[0].price * cartItems[0].qty;
-    
+
     return `<h3>SUBTOTAL</h3>
                 <div class='subtotal-items'>
                 ${cartItems.map((cartItem)=> `

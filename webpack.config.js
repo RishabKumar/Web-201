@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: ['babel-polyfill', './src/index.js'],
-    
+
 
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -50,12 +50,13 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-          //              presets: ['@babel/preset-env']
-                    }
-                }
+                //use: {
+                //loader: 'babel-loader',
+                //}
+                use: [
+                      "babel-loader",
+                      "eslint-loader",
+                    ],
             },
             {
                 test: /\.scss$/,
@@ -66,25 +67,24 @@ module.exports = {
                 "sass-loader" // compiles Sass to CSS
                 /*/
 
-                        MiniCssExtractPlugin.loader,
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: {
-                                    safe: true
-                                }
-                            }
-                        },
-
-                        {
-                            loader: "sass-loader",
-                            options: {
-                                minimize: {
-                                    safe: true
-                                }
-                                
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            minimize: {
+                                safe: true
                             }
                         }
+                        },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                                minimize: {
+                                    safe: true
+                                }
+
+                            }
+                    }
                 ]
             }
         ],

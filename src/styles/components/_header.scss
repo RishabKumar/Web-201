@@ -37,3 +37,9 @@ header {
 .header-height-s {
     @include xheight($headerheight_s);
 }
+
+@media(max-width:1000px) {
+    .header-height-l {
+        @include xheight($headerheight_s);
+    }
+}

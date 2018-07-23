@@ -13,8 +13,8 @@ export const menuItemTemplate = (item) => {
                                     <div class='add-to-cart-container'>
                                         <div>
                                             <h4><span class='label'>PRICE</span>
-                                                <span class='price price-half'>${item.price.h}</span>
-                                                <span class='price price-full'>${item.price.f}</span>
+                                                <span class='price price-half'>₹${item.price.h}</span>
+                                                <span class='price price-full'>₹${item.price.f}</span>
                                             </h4>
                                         </div>
                                         <div>

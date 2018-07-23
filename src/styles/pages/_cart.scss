@@ -111,17 +111,15 @@ a {
     @include setFont(.5, 500);
 }
 
-.checkout-container {
-    text-align: right;
-}
-
 .checkout-btn {
-    margin: 1% 1% 0 0;
+    margin: 2% 2% 0 0;
     background-color: #fb641b;
     color: #fff;
-    width: 15vw;
-    height: 6vh;
+    width: 10vw;
     font-size: 1.3rem;
+    display: inline-block;
+    align-content: center;
+    text-align: center
 }
 
 

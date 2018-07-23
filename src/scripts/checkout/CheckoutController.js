@@ -1,6 +1,12 @@
 import {
     selector
 } from './../common/common';
+import {
+    accordian
+} from './components/accordian';
+import {
+    order
+} from './components/ordersummary';
 
 export class CheckoutController {
 
@@ -13,7 +19,8 @@ export class CheckoutController {
     }
 
     bindComponentEvents() {
-
+        selector.proceed().forEach((t) => t.addEventListener('click', accordian.openNxtAccordian));
+        selector.accordianbtn().forEach((t) => t.addEventListener('click', accordian.openAccordian));
        
     }
 
@@ -21,6 +28,7 @@ export class CheckoutController {
         
         this.bindWindowEvents();
         this.bindComponentEvents();
+        order.populateOrderSummary();
     }
 
 }

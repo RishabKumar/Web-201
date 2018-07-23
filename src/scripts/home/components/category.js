@@ -20,14 +20,17 @@ const selectCategory = (e) => {
 
             selector.categories().forEach((x) => {
                 if (x.id == 'cat-' + ele.id) {
-                    x.style = "background-color:#f7a91980;font-weight: 600;";
+                    x.style['background-color'] = "#f7a91980";
+                    x.style['font-weight'] = "600";
                 } else {
-                    x.style = "background-color:#fff";
+                    x.style['background-color'] = '#fff';
+                    x.style['font-weight'] = "400";
                 }
             });
 
         } else {
-            ele.style = "background-color:#fff";
+            ele.style['background-color'] = '#fff';
+            //ele.style = "background-color:#fff";
 
         }
 

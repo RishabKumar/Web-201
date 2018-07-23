@@ -9,7 +9,7 @@
         "dev": "webpack-dev-server --mode development",
         "devpro": "webpack-dev-server  --mode production",
         "sass": "node-sass src/styles/main.scss dist/min.css --watch",
-        "serve":  "webpack-serve ./webpack.config.js --no-reload"
+        "serve": "webpack-serve ./webpack.config.js --no-reload"
     },
     "keywords": [],
     "author": "",
@@ -17,11 +17,14 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
+        "babel-eslint": "^8.2.6",
         "babel-loader": "^7.1.4",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
         "copy-webpack-plugin": "^4.5.2",
         "css-loader": "^0.28.11",
+        "eslint": "^5.2.0",
+        "eslint-loader": "^2.1.0",
         "mini-css-extract-plugin": "^0.4.1",
         "node-sass": "^4.9.0",
         "sass-loader": "^7.0.3",
