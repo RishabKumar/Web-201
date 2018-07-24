@@ -10,6 +10,7 @@ import {
 import {
     menuItems
 } from './menuitem.js';
+const $ = require("jquery");
 
 const populateSearchDropDown = (menuitem) => {
     selector.searchresults().insertAdjacentHTML('beforeend', searchResultTemplate(menuitem));

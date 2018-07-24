@@ -1,4 +1,4 @@
-require('jquery');
+const $ = require("jquery");
 
 export const selector = (function () {
     return {
@@ -22,7 +22,6 @@ export const selector = (function () {
         "searchIcon": () => document.querySelector('.search-icon'),
         "closeIcon": () => document.querySelector('.close-icon'),
         "fullmenudiv": () => document.querySelector('.full-menu div'),
-       // "itemSize": () => document.querySelectorAll('input[name=size]'),
         "itemSize": () => document.querySelectorAll('.fullsize,.halfSize'),
         "reduceQty": () => document.querySelectorAll('a.reduce-qty'),
         "increaseQty": () => document.querySelectorAll('a.increase-qty'),
