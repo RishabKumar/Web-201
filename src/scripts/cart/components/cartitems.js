@@ -28,7 +28,7 @@ const cartItemsDom = () => {
         final += cartItemTemplate(item);
     });
     return final;
-}
+};
 
 const reduceQty = (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ const reduceQty = (e) => {
             subtotal.populateCartItems();
         }
     }
-}
+};
 
 const increaseQty = (e) => {
     e.preventDefault();
@@ -59,7 +59,7 @@ const increaseQty = (e) => {
             subtotal.populateCartItems();
         }
     }
-}
+};
 
 const selectSize = (e) => {
     const items = Common.fetchItems('menu-items.json');
@@ -68,10 +68,10 @@ const selectSize = (e) => {
     const item = items.find((t) => t.id == id);
     let size = 'f';
     if (e.target.className === 'halfSize') {
-        parent.querySelector('.item-price span').innerText = item.price.h;
+        parent.querySelector('.item-price span').innerText = '₹'+item.price.h;
         size = 'h';
     } else if (e.target.className === 'fullSize') {
-        parent.querySelector('.item-price span').innerText = item.price.f;
+        parent.querySelector('.item-price span').innerText = '₹'+item.price.f;
     }
     const cartid = e.target.parentElement.parentElement.parentElement.parentElement.dataset.cartId;
     let tmp = Cart.getCartItem(cartid);
@@ -80,13 +80,13 @@ const selectSize = (e) => {
         Cart.updateCart(tmp);
         subtotal.populateCartItems();
     }
-}
+};
 
 const removeItem =(e) => {
     const id = e.target.parentElement.parentElement.dataset.cartId;
     Cart.removeFromCart(id);
     window.location.reload();
-}
+};
 
 export const cartitems = {
     populateCartItems: populateCartItems,
@@ -95,4 +95,4 @@ export const cartitems = {
     increaseQty: increaseQty,
     selectSize: selectSize,
     removeItem: removeItem
-}
+};

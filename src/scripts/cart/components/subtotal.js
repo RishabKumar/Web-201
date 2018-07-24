@@ -20,9 +20,9 @@ const subtotalDom = () => {
     cartitems.sort((x,y) => x.time > y.time);
     final += subtotalTemplate(cartitems);
     return final;
-}
+};
 
 export const subtotal = {
     populateCartItems: populateCartItems,
     subtotalDom: subtotalDom
-}
+};

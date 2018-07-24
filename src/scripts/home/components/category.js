@@ -11,7 +11,7 @@ import {
     Common
 } from '../../common/common';
 
-const selectCategory = (e) => {
+const selectCategory = () => {
     selector.category().forEach((ele) => {
         const bufferheight = window.innerHeight * 0.08;
         const winloc = (bufferheight) + window.scrollY;
@@ -45,7 +45,7 @@ const fetchCategories = () => {
         tmp.push(new Category(items[i].id, items[i].name, items[i].imgsrc));
     }
     return tmp;
-}
+};
 
 const fetchCategories2 = () => {
     let tmp = [];
@@ -54,7 +54,7 @@ const fetchCategories2 = () => {
         tmp.push(new Category(items[i].id, items[i].name));
     }
     return tmp;
-}
+};
 
 export const allCategoriesDom = () => {
 
@@ -68,7 +68,7 @@ export const allCategoriesDom = () => {
 const populateData = () => {
     selector.categories_ul().innerHTML = '';
     selector.categories_ul().insertAdjacentHTML("afterbegin", allCategoriesDom());
-}
+};
 
 export const category = {
     selectCategory: selectCategory,
@@ -76,4 +76,4 @@ export const category = {
     allCategoriesDom: allCategoriesDom,
     fetchCategories: fetchCategories,
     fetchCategories2: fetchCategories2
-}
+};

@@ -2,8 +2,7 @@ import {
     selector
 } from '../../common/common.js';
 
-const moveRight = (e) => {
-
+const moveRight = () => {
     selector.slider().scrollBy({
         left: window.innerWidth * 0.85,
         behavior: 'smooth'
@@ -14,17 +13,16 @@ const moveRight = (e) => {
             behavior: 'smooth'
         });
     }
-}
+};
 
-const moveLeft = (e) => {
-
+const moveLeft = () => {
     selector.slider().scrollBy({
         left: window.innerWidth * 0.85 * -1,
         behavior: 'smooth'
     });
-}
+};
 
 export const carousel = {
     moveRight: moveRight,
     moveLeft: moveLeft,
-}
+};

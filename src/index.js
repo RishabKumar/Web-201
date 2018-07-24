@@ -7,7 +7,10 @@ import './components/home/item-loader.js';
 /*/
 
 import './styles/main.scss';
-import './scripts/controller/GlobalController.js';
+//import './scripts/vendor/jquery.min.js';
+import {app} from './scripts/controller/GlobalController.js';
 
-require("babel-polyfill");
+require('babel-polyfill');
 
+app.loadPolyfills();
+app.init();

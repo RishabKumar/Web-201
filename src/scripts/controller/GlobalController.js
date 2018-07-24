@@ -1,8 +1,24 @@
-import {UIController} from './UIController.js';
-import {Route} from './../routes/routes.js';
-import {forEachPolyfill} from '../Polyfills/CustomPolyfill.js';
+import {
+    ComponentsController
+} from './ComponentsController.js';
+import {
+    Route
+} from './../routes/routes.js';
+import {
+    Polyfills
+} from '../Polyfills/CustomPolyfill.js';
 
-forEachPolyfill();
- 
-let ui = new UIController(Route.getPage());
-ui.init();
+const initComponents = () => {
+    let ci = new ComponentsController(Route.getPage());
+    ci.init();
+};
+
+const loadPolyfills = () => {
+    Polyfills.forEachPolyfill();
+    Polyfills.scrollBy();
+};
+
+export const app = {
+    init: initComponents,
+    loadPolyfills: loadPolyfills
+};

@@ -13,5 +13,4 @@ export class Header {
             selector.header().className = 'header-height-l';
         }
     }
-
 }

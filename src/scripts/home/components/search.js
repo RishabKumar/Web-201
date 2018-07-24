@@ -9,51 +9,52 @@ import {
 } from '../models/MenuItem';
 import {
     menuItems
-} from './menuitem.js'
+} from './menuitem.js';
 
 const populateSearchDropDown = (menuitem) => {
     selector.searchresults().insertAdjacentHTML('beforeend', searchResultTemplate(menuitem));
-}
+};
 
-const searchForInput = (e) => {
+const searchForInput = () => {
+    selector.searchresults().style['display'] = 'block';
     selector.searchresults().innerHTML = '';
-    selector.searchbar().removeEventListener('keyup', searchForInput)
+    selector.searchbar().removeEventListener('keyup', searchForInput);
     setTimeout(function () {
         selector.searchbar().addEventListener('keyup', searchForInput);
         searchKeys(populateSearchDropDown);
     }, 400);
-}
+};
 
 const searchAndGetAll = () => {
     clearSearch();
-    selector.searchresultsection().style = ';display:block;';
+    selector.searchresultsection().style['display'] = 'block';
     selector.searchresultsectionmenuitems().innerHTML = '';
     searchKeys(menuItems.populateSearchData, NoResultFound);
     window.scrollBy(0,1);
-}
+};
 
 const NoResultFound = () => {
     selector.searchresultsectionmenuitems().innerHTML = '<span style="margin-left:5%">No Result Found.<span>';
-}
+};
 
 const searchKeys = (fn, failfn) => {
     let flag = false;
     if (selector.searchbar().value.length > 0) {
         index.forEach((value, key) => {
-            const reg1 = new RegExp("(.*)" + selector.searchbar().value.toLowerCase() + "(.*)");
-            const reg2 = new RegExp("(.*)" + key.toLowerCase() + "(.*)");
+            const reg1 = new RegExp('(.*)' + selector.searchbar().value.toLowerCase() + '(.*)');
+            const reg2 = new RegExp('(.*)' + key.toLowerCase() + '(.*)');
             if (reg1.test(key.toLowerCase()) || reg2.test(selector.searchbar().value.toLowerCase())) {
                 value.forEach((menuitem) => {
                     fn(menuitem);
                     flag = true;
-                })
+                });
             }
         });
     }
     if(!flag){
         failfn();
     }
-}
+};
 
 
 let index = new Map();
@@ -61,7 +62,7 @@ const generateMenuIndex = function () {
     index = new Map();
     $.ajax({
         url: '/static/menu-items.json',
-        datatype: "json",
+        datatype: 'json',
         async: true,
         success: function (items) {
             items = Object.values(items);
@@ -84,14 +85,14 @@ const generateMenuIndex = function () {
 };
 
 const clearSearch = () => {
-    
+    selector.searchresults().style['display'] = 'none';
     selector.searchresults().innerHTML = '';
-    selector.searchresultsection().style = ';display:none;';
-}
+    selector.searchresultsection().style['display'] = 'none';
+};
 
 export const search = {
     searchForInput: searchForInput,
     generateMenuIndex: generateMenuIndex,
     searchAndGetAll: searchAndGetAll,
     clearSearch: clearSearch
-}
+};

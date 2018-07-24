@@ -108,7 +108,7 @@ a {
 }
 
 .label {
-    @include setFont(.5, 500);
+    @include setFont(.6, 500);
 }
 
 .checkout-btn {
@@ -127,6 +127,8 @@ a {
     .subtotal-container-div {
         padding: 4%;
         margin-top: 1%;
+        position: sticky;
+        top: 8vh;
     }
 
     .subtotal-items {

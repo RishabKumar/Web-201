@@ -18,7 +18,7 @@ export const cartItemTemplate = (cartItem) => {
                         </span>
                             </div>
                             <div class='item-price'>
-                                 <span>₹${cartItem.price}</span> 
+                                 <span>₹${cartItem.price}</span>  
                             </div>
 
                         </div>
@@ -36,7 +36,7 @@ export const cartItemTemplate = (cartItem) => {
                         </div>
                     </div>
                 </li>`;
-}
+};
 
 const getItemAvailableSizes = (cartitem) => {
     let final = '';
@@ -49,4 +49,4 @@ const getItemAvailableSizes = (cartitem) => {
         final += `F<input type='radio' name='size-${sizeid}' value='f' class='fullSize' ${cartitem.size === 'f'?'checked=checked':''}>`;
     }
     return final;
-}
+};

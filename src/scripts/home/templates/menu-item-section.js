@@ -1,7 +1,4 @@
 import {
-    MenuItem
-} from '../models/MenuItem';
-import {
     menuItemTemplate
 } from '../templates/menu-item';
 
@@ -16,11 +13,11 @@ export const menuItemSectionTemplate = (cat, menuitems) =>{
                         </section>
                         <hr>
                     </section>`;
-}
+};
 
 const transformMenuItems = (menuitems) => {
     
     let final = '';
     menuitems.forEach((item) => final+=menuItemTemplate(item));
     return final;
-}
+};

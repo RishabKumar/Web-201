@@ -55,7 +55,7 @@ class PopulateData {
 }
 
 /*/
-export class UIController {
+export class ComponentsController {
     constructor(page) {
         this.page = page;
     }
@@ -65,24 +65,21 @@ export class UIController {
         window.addEventListener('load', Header.reduceHeaderOnScroll);
         window.addEventListener('load', Common.setCartCount);
         switch (this.page) {
-            case 'cart':
+                case 'cart':
                 {
                     cart.init();
                     break;
                 }
-            case 'checkout':
+                case 'checkout':
                 {
-                    checkout.init();  
+                    checkout.init();
                     break;
                 }
-            default:
+                default:
                 {
                     home.init();
                     break;
                 }
         }
     }
-
-
-
 }

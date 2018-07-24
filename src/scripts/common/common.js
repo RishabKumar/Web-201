@@ -1,3 +1,5 @@
+require('jquery');
+
 export const selector = (function () {
     return {
         "leftarrow": () => document.querySelector('.featured-carousel .arrow.left'),
@@ -49,7 +51,7 @@ export class Common {
             }
         });
         return tmp;
-    };
+    }
 
     static setCartCount() {
         selector.cartcount().innerText = loadFromCart().length;
@@ -65,4 +67,4 @@ const loadFromCart = () => {
         itemArr = JSON.parse(itemstr);
         return itemArr;
     }
-}
+};

@@ -6,7 +6,7 @@
         FOODIE - CART
     </title>
     <link href="min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/scripts/vendor/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800" rel="stylesheet">
 </head>
 
@@ -33,28 +33,24 @@
             <div class='accordian-container' id='address'>
                 <button>ADDRESS</button>
                 <div class='address'>
-                    <span>Address Line1</span><span><input></span>
-                    <span>Address Line2</span><span><input></span>
-                    <span>City</span><span><input></span>
-                    <span>State</span><span><input></span>
+                    <span>Address Line1</span><span><input type='text' required></span>
+                    <span>Address Line2</span><span><input type='text' required></span>
+                    <span>City</span><span><input type='text' required></span>
+                    <span>State</span><span><input type='text' required></span>
                     <span></span><span><a href='#'>Proceed</a></span>
                 </div>
             </div>
             <div class='accordian-container' id='summary'>
                 <button>ORDER SUMMARY</button>
                 <div class='summary'>
-                    <span>BIRYANI (F) x 3</span><span>800</span>
-                    <span>BIRYANI (H) x 1</span><span>400</span>
-                    <span>SUBTOTAL</span><span>1200</span>
-                    <span>TAX (5%)</span><span>56</span>
-                    <span>TOTAL</span><span>1256</span>
                     <span></span><span><a href='#'>Proceed</a></span>
                 </div>
             </div>
             <div class='accordian-container' id='paymentoptions'>
                 <button>PAYMENT</button>
                 <div class='payment'>
-                    <span><input type='checkbox'>COD</span>
+                    <span><img src='/static/icons/cashondelivery.gif' width='75%'> </span>
+                    <span><img src='/static/icons/paytm.png' width='75%'> </span>
                 </div>
             </div>
 

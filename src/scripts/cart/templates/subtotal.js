@@ -27,4 +27,4 @@ export const subtotalTemplate = (cartItems) => {
                                     </span>
                                 </div>`;
 
-}
+};

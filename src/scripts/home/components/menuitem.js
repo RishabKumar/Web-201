@@ -17,9 +17,6 @@ import {
     category
 } from './category';
 import {
-    CartItem
-} from '../../cart/models/CartItem';
-import {
     Cart
 } from '../../cart/components/cart';
 
@@ -34,15 +31,15 @@ const fetchMenuItems = function () {
 
 const populateData = () => {
     selector.menuitemcontainer().insertAdjacentHTML('beforeend', menuItemSectionDom());
-}
+};
 
 const populateFullMenuData = () => {
     selector.fullmenudiv().insertAdjacentHTML('beforeend', fullMenuItemSectionDom());
-}
+};
 
 const populateSearchData = (item) => {
     selector.searchresultsectionmenuitems().insertAdjacentHTML('beforeend', menuItemTemplate(item));
-}
+};
 
 const menuItemSectionDom = () => {
     const c = category.fetchCategories();
@@ -59,7 +56,7 @@ const menuItemSectionDom = () => {
     return final;
 };
 
-const fullMenuItemSectionDom = (categories) => {
+const fullMenuItemSectionDom = () => {
     const c = category.fetchCategories2();
     const cat_menuitem_map = new Map();
     const menuitems = fetchMenuItems();
@@ -76,31 +73,31 @@ const fullMenuItemSectionDom = (categories) => {
 
 const selectSize = (e) => {
     if (e.target.className === 'halfSize') {
-        let h = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-half');
-        h.style = 'display:inline-block;';
-        let f = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-full');
-        f.style = 'display:none;';
+        let h = e.target.parentElement.parentElement.parentElement.querySelector('div span.price-half');
+        h.style['display'] = 'inline-block';
+        let f = e.target.parentElement.parentElement.parentElement.querySelector('div span.price-full');
+        f.style['display'] = 'none';
     } else if (e.target.className === 'fullSize') {
-        let h = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-half');
-        h.style = 'display:none;';
-        let f = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div h4  span.price-full');
-        f.style = 'display:inline-block;';
+        let h = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div span.price-half');
+        h.style['display'] = 'none';
+        let f = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('div span.price-full');
+        f.style['display'] = 'inline-block';
     }
-}
+};
 
 const reduceQty = (e) => {
     e.preventDefault();
     let input = e.target.parentElement.querySelector('input.item-qty');
     if (parseInt(input.value) > 0)
         input.value = parseInt(input.value) - 1;
-}
+};
 
 const increaseQty = (e) => {
     e.preventDefault();
     let input = e.target.parentElement.querySelector('input.item-qty');
     if (parseInt(input.value) < 5)
         input.value = parseInt(input.value) + 1;
-}
+};
 
 const getSelectedItem = (e) => {
     e.preventDefault();
@@ -116,21 +113,24 @@ const getSelectedItem = (e) => {
     if (qty == '0') {
         qty = '1';
     }
-    const id = e.target.parentElement.parentElement.parentElement.parentElement.id;
+    const id = e.target.parentElement.parentElement.parentElement.id;
     if (id != undefined && id.length > 0) {
         Cart.addToCart(size, qty, id);
     }
-}
+};
 
 //added for accessibility
 const showAddToCart = (e) => {
-    e.target.parentElement.nextElementSibling.style = 'transform: scaleY(1);';
-}
+
+    e.target.parentElement.nextElementSibling.style['transform'] = 'scaleY(1)';
+};
 
 //added for accessibility
+/*/
 const hideAddToCart = (e) => {
-    e.target.parentElement.nextElementSibling.style = 'transform: scaleY(0);';
-}
+    e.target.parentElement.nextElementSibling.style['transform'] = 'scaleY(0)';
+};
+/*/
 
 export const menuItems = {
     populateData: populateData,
@@ -143,4 +143,4 @@ export const menuItems = {
     increaseQty: increaseQty,
     getSelectedItem: getSelectedItem,
     showAddToCart: showAddToCart
-}
+};

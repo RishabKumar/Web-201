@@ -14,9 +14,6 @@ import {
     selector
 } from '../common/common.js';
 import {
-    Common
-} from '../common/common.js';
-import {
     search
 } from './components/search';
 
@@ -47,7 +44,7 @@ const bindWindowEvents = () => {
             lazyBind(img);
         }));
     });
-}
+};
 
 const bindComponentEvents = () => {
     selector.rightarrow().addEventListener('click', carousel.moveRight);
@@ -75,6 +72,5 @@ const bindComponentEvents = () => {
     selector.addtocartbtn().forEach((t) => {
         t.addEventListener('click', menuItems.getSelectedItem);
     });
-
-    //selector.cartcount()
-}
+ 
+};

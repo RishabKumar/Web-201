@@ -9,9 +9,9 @@ import {
 } from './../templates/ordersummary';
 
 const populateOrderSummary = () => {
-    selector.ordersummary().innerHTML = '';
-    selector.ordersummary().insertAdjacentHTML('beforeend', orderSummaryDom());
-}
+    //  selector.ordersummary().innerHTML = '';
+    selector.ordersummary().insertAdjacentHTML('afterbegin', orderSummaryDom());
+};
 
 const orderSummaryDom = () => {
     const cartitems = Cart.loadFromCart();
@@ -24,8 +24,8 @@ const orderSummaryDom = () => {
     const tax = subtotal * .05;
     const total = subtotal + tax;
     return orderSummaryTemplate(cartitems, subtotal, tax, total);
-}
+};
 
 export const order = {
     populateOrderSummary: populateOrderSummary
-}
+};

@@ -11,7 +11,7 @@
         text-decoration: none;
         border: 1px solid #6485c3;
         color: #fff;
-        background-color: rgba(237, 191, 0, 0.85);
+        background-color: #ff9f00c9;
         @include setFont(.6, 500);
     }
 }
@@ -21,7 +21,8 @@ div.address {
 }
 
 .address,
-.summary {
+.summary,
+.payment {
     display: none;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1%;
@@ -38,12 +39,13 @@ div.address {
     span:nth-child(odd) {
         text-align: left;
         margin: 0 auto;
-        min-width: 80%;
-        @include setFont(.6, 400);
+        width: 100%;
+        @include setFont(.6, 500);
     }
     span:nth-child(even) {
         text-align: center;
-        @include setFont(.6, 600);
+        @include setFont(.6, 500);
+        width: 100%;
     }
     a {
         text-decoration: none;
@@ -51,7 +53,12 @@ div.address {
         color: #6485c3;
         background-color: #fff;
     }
+    span.total-price {
+        @include setFont(.7, 600);
+    }
 }
+
+
 
 @media (max-width: 1000px) {
     .checkout-container {

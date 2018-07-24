@@ -138,7 +138,7 @@ $boxwidth: 20vw;
             border-radius: 50px;
             padding: 0 8px 0 8px;
         }
-        .label {}
+
     }
     h3 {
         text-align: center;
@@ -146,10 +146,14 @@ $boxwidth: 20vw;
     .price-half {
         display: none;
     }
+    .add-to-cart-btn {
+        @include setFont(.6, 500);
+    }
 }
 
 .menu-item-container {
-    padding-left: 10px;
+    padding-left: 10px; //   min-width: 65vw;
+    width: 100%;
 }
 
 
@@ -159,7 +163,6 @@ $boxwidth: 20vw;
 }
 
 .add-to-cart-container {
-
     display: flex;
     position: absolute;
     padding: 1px;
@@ -193,9 +196,10 @@ $boxwidth: 20vw;
 div.add-btn-dummy-container {
     position: absolute;
     right: 0;
-    bottom: 18%;
+    top: 30%;
     width: 10vh;
     button {
+        height: 5vh;
         border: 1px solid #388e3c;
         color: #388e3c;
         background-color: #fff;
@@ -291,8 +295,8 @@ section:target::before {
         width: 95%;
         border-radius: 30px;
         border-style: groove;
-        height: 5vh;
-        padding: 20px;
+        height: 5.5vh;
+        padding-left: 20px;
         z-index: 900;
         position: absolute;
         text-align: left;
@@ -355,7 +359,8 @@ section:target::before {
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 1px solid #919191; 
+    border: 1px solid #919191;
+    overflow: hidden;
     .slider {
         display: flex;
         position: absolute;
@@ -441,6 +446,7 @@ section:target::before {
         background-color: #fff;
         margin: 0 auto;
         padding: 0;
+        transform: translateY(-2%);
     }
 
     .categories {
@@ -501,10 +507,6 @@ section:target::before {
             }
 
         }
-    }
-
-    .menu-item-container {
-        transform: translateY(-2%);
     }
 
     .menu-item {
