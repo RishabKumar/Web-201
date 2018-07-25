@@ -116,6 +116,14 @@ const getSelectedItem = (e) => {
     const id = e.target.parentElement.parentElement.parentElement.id;
     if (id != undefined && id.length > 0) {
         Cart.addToCart(size, qty, id);
+        const l = document.querySelector('.cart-link');
+        l.classList.remove('cart-link');
+        setTimeout(() => {
+            const animate = (l) => {
+                l.className = 'cart-link';
+            };
+            animate(l);
+        }, 50);
     }
 };
 

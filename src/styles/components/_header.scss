@@ -38,6 +38,33 @@ header {
     @include xheight($headerheight_s);
 }
 
+.cart-link {
+    display: inline-block;
+    animation: shake .7s 1;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-30%);
+        color: red;
+    }
+    50% {
+        transform: translateX(60%);
+        color: red;
+    }
+    75% {
+        transform: translateX(-60%);
+        color: red;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
 @media(max-width:1000px) {
     .header-height-l {
         @include xheight($headerheight_s);
