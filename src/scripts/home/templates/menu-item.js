@@ -1,11 +1,13 @@
 export const menuItemTemplate = (item) => {
-    return `<div class='menu-item' id='${item.id}'>
-                                <div><img src='${loaderbase64}' img-loaded='false' lazy-img-src='${item.imgsrc}'/></div>
-                                <h3>${item.name}</h3>
+    return `<div class='menu-item' id='${item.id}' vocab='http://schema.org/' typeof='MenuItem'>
+                                <div><img src='${loaderbase64}' img-loaded='false' lazy-img-src='${item.imgsrc}'/>
+                                <meta property='image' src='${item.imgsrc}'/>
+                                </div>
+                                <h3 property='name'>${item.name}</h3>
                                 <div class='item-description'>
                                     <hr/>
                                     
-                                        <h4><span class='description'>${item.description}</span></h4>
+                                        <h4><span property='description' class='description'>${item.description}</span></h4>
                                     
                                     <div class='add-btn-dummy-container'>
                                         <button>Add</button>

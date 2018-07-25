@@ -328,8 +328,14 @@ section:target::before {
         }
 
     }
-    .search-result:hover {
-        background-color: rgba(247, 169, 25, 0.5);
+    .search-result {
+        a {
+            display: inline-block;
+            width: 100%;
+        }
+        &:hover {
+            background-color: rgba(247, 169, 25, 0.5);
+        }
     }
     img {
         z-index: 900;
