@@ -1,6 +1,6 @@
 export const menuItemTemplate = (item) => {
     return `<div class='menu-item' id='${item.id}' vocab='http://schema.org/' typeof='MenuItem'>
-                                <div><img src='${loaderbase64}' img-loaded='false' lazy-img-src='${item.imgsrc}'/>
+                                <div><img src='${loaderbase64}' img-loaded='false' alt='${item.name}' lazy-img-src='${item.imgsrc}'/>
                                 <meta property='image' src='${item.imgsrc}'/>
                                 </div>
                                 <h3 property='name'>${item.name}</h3>

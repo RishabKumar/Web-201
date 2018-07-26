@@ -442,7 +442,7 @@ section:target::before {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
 
-@media (max-width: 1000px) {
+@media (min-device-width: 320px) and (max-device-width: 900px) {
 
     .menu {
         display: block;
@@ -460,7 +460,7 @@ section:target::before {
         max-width: 50vw;
         max-height: 40vh;
         z-index: 100;
-        top: 15vh;
+        top: 18vh;
         background-color: #fff0;
         div {
             margin: 0;
@@ -547,4 +547,30 @@ section:target::before {
         }
     }
 
+}
+
+@media (min-width: 1001px) and (max-width: 1366px) and (orientation: portrait) {
+    .menu-container {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .full-menu {
+        .menu-item {
+            flex-basis: 33%;
+            margin-bottom: 10px;
+            @include xheight(35);
+        }
+    }
+    .menu-item {
+        flex-basis: 50%;
+        margin-bottom: 10px;
+        @include xheight(35);
+    }
+    .categories {
+        div {
+            min-width: 31vw;
+        }
+
+        @include xheight(65);
+    }
 }

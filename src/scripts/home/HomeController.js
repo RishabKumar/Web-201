@@ -16,11 +16,22 @@ import {
 import {
     search
 } from './components/search';
+import firebase from 'firebase';
 
+let storage = '';
 export class HomeController {
 
     constructor() {
-
+        var config = {
+            apiKey: "AIzaSyB9NBMkReB1oOkdSO4Csk9qbZPqx4uXh20",
+            authDomain: "web201-201.firebaseapp.com",
+            databaseURL: "https://web201-201.firebaseio.com",
+            projectId: "web201-201",
+            storageBucket: "web201-201.appspot.com",
+            messagingSenderId: "527954885165"
+        };
+        firebase.initializeApp(config);
+        storage = firebase.storage();
     }
 
     populateData() {
@@ -41,7 +52,7 @@ const bindWindowEvents = () => {
     window.addEventListener('scroll', category.selectCategory);
     window.addEventListener('scroll', function () {
         selector.lazyimg().forEach((img => {
-            lazyBind(img);
+            lazyBind(storage, img);
         }));
     });
 };
@@ -51,13 +62,13 @@ const bindComponentEvents = () => {
     selector.leftarrow().addEventListener('click', carousel.moveLeft);
     selector.searchbar().addEventListener('keyup', search.searchForInput);
     selector.lazyimg().forEach((img => {
-        lazyBind(img);
+        lazyBind(storage, img);
     }));
     selector.searchIcon().addEventListener('click', search.searchAndGetAll);
     selector.closeIcon().addEventListener('click', search.clearSearch);
     selector.adddummybtn().forEach((t) => t.addEventListener('focusin', menuItems.showAddToCart));
     selector.adddummybtn().forEach((t) => t.addEventListener('focusout', menuItems.hideAddToCart));
-    
+
 
     selector.itemSize().forEach((size) => {
         size.addEventListener('click', menuItems.selectSize);
@@ -72,5 +83,5 @@ const bindComponentEvents = () => {
     selector.addtocartbtn().forEach((t) => {
         t.addEventListener('click', menuItems.getSelectedItem);
     });
- 
+
 };

@@ -3,7 +3,7 @@ export const cartItemTemplate = (cartItem) => {
                     <div class='cart-item' data-cart-id='${cartItem.id}' data-item-id='${cartItem.item.id}'>
                         <div class='cart-item-img'>
                             <div>
-                                <img src='${cartItem.item.imgsrc}'>
+                                <img src='${cartItem.item.imgsrc}' alt='${cartItem.item.name}'>
                             </div>
                         </div>
                         <div class='cart-item-desc'>

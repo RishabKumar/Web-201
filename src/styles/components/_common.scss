@@ -32,9 +32,11 @@
 
 
 $basefontsize: 1.5rem;
+
 @mixin setFont($size, $weight) {
     @media (max-width: 1000px) {
-        $basefontsize: 4rem;
+        //$basefontsize: 4rem;
+        $basefontsize: 5.1vw;
         font-weight: $weight;
         font-size: $basefontsize * $size;
     }
@@ -69,6 +71,8 @@ h3 {
     //font-weight: 500;
     //font-size: $basefontsize * .75;
     @include setFont(.75, 500);
+ //   font-size: 3.7vw;
+  //  font-weight: 500; 
 }
 
 h4 {

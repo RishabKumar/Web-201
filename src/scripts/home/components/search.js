@@ -38,8 +38,8 @@ const NoResultFound = () => {
     selector.searchresultsectionmenuitems().innerHTML = '<span style="margin-left:5%">No Result Found.<span>';
 };
 
-const searchKeys = (fn, failfn) => {
-    let flag = false;
+const searchKeys = (fn) => {
+   // let flag = false;
     if (selector.searchbar().value.length > 0) {
         index.forEach((value, key) => {
             const reg1 = new RegExp('(.*)' + selector.searchbar().value.toLowerCase() + '(.*)');
@@ -47,14 +47,12 @@ const searchKeys = (fn, failfn) => {
             if (reg1.test(key.toLowerCase()) || reg2.test(selector.searchbar().value.toLowerCase())) {
                 value.forEach((menuitem) => {
                     fn(menuitem);
-                    flag = true;
+              //      flag = true;
                 });
             }
         });
     }
-    if(!flag){
-        failfn();
-    }
+    
 };
 
 
