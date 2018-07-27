@@ -13,71 +13,43 @@ import {
 import {
     checkout
 } from './../checkout/index.js';
+import firebase from 'firebase/app';
+import 'firebase/storage';
 
-/*/
-class EventBinder {
-
-    constructor(page) {
-        this.page = page;
-    }
-
-    bindEvents() {
-        if (this.page === 'home') {
-            window.addEventListener('scroll', home.category.selectCategory);
-            window.addEventListener('scroll', home.header.reduceHeaderOnScroll);
-
-            selector.rightarrow().addEventListener('click', home.carousel.moveRight);
-            selector.leftarrow().addEventListener('click', home.carousel.moveLeft);
-
-            selector.lazyimg().forEach((img => {
-                home.lazyBind(img);
-            }));
-            window.addEventListener('scroll', function () {
-                selector.lazyimg().forEach((img => {
-                    home.lazyBind(img);
-                }));
-            });
-
-        }
-    }
-
-}
-
-class PopulateData {
-    constructor(page) {
-
-    }
-
-    populateData() {
-        selector.menuitems().innerHTML = '';
-        selector.menuitems().insertAdjacentHTML("afterbegin", home.menuItems());
-    }
-}
-
-/*/
 export class ComponentsController {
     constructor(page) {
         this.page = page;
+        var config = {
+            apiKey: "AIzaSyB9NBMkReB1oOkdSO4Csk9qbZPqx4uXh20",
+            authDomain: "web201-201.firebaseapp.com",
+            databaseURL: "https://web201-201.firebaseio.com",
+            projectId: "web201-201",
+            storageBucket: "web201-201.appspot.com",
+            messagingSenderId: "527954885165"
+        };
+        firebase.initializeApp(config);
+        this.firebaseStorage = firebase.storage();
     }
 
-    init() {
+    init() 
+    {
         window.addEventListener('scroll', Header.reduceHeaderOnScroll);
         window.addEventListener('load', Header.reduceHeaderOnScroll);
         window.addEventListener('load', Common.setCartCount);
         switch (this.page) {
-                case 'cart':
+            case 'cart':
                 {
-                    cart.init();
+                    cart.init(this.firebaseStorage);
                     break;
                 }
-                case 'checkout':
+            case 'checkout':
                 {
-                    checkout.init();
+                    checkout.init(this.firebaseStorage);
                     break;
                 }
-                default:
+            default:
                 {
-                    home.init();
+                    home.init(this.firebaseStorage);
                     break;
                 }
         }

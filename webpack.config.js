@@ -12,6 +12,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     devServer: {
         contentBase: './dist'
     },
@@ -29,8 +34,6 @@ module.exports = {
             template: './src/pages/checkout.html'
         }),
          new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
             filename: "min.css",
         }),
         new CopyWebpackPlugin([
@@ -61,12 +64,6 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    /*/
-                "style-loader", // creates style nodes from JS strings
-                "css-loader", // translates CSS into CommonJS
-                "sass-loader" // compiles Sass to CSS
-                /*/
-
                     MiniCssExtractPlugin.loader,
                     {
                         loader: "css-loader",
