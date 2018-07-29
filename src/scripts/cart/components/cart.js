@@ -86,10 +86,15 @@ const getCartItem = (cartid) => {
     return arr.find((cartitem) => cartitem.id == cartid);
 };
 
+const clearCart = () => {
+    localStorage.clear();
+};
+
 export const Cart = {
     loadFromCart: loadFromCart,
     addToCart: addToCart,
     getCartItem: getCartItem,
     updateCart: updateCart,
-    removeFromCart: removeFromCart
+    removeFromCart: removeFromCart,
+    clearCart: clearCart
 };

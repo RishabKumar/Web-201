@@ -21,7 +21,7 @@ export class CheckoutController {
     bindComponentEvents() {
         selector.proceed().forEach((t) => t.addEventListener('click', accordian.openNxtAccordian));
         selector.accordianbtn().forEach((t) => t.addEventListener('click', accordian.openAccordian));
-       
+       selector.pay().forEach((t) => t.addEventListener('click', accordian.pay ));
     }
 
     init() {

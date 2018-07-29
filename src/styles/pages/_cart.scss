@@ -1,6 +1,6 @@
 @import './../components/_common';
 
-.cart-container {
+.cart-items-container {
     //padding: 5%;
     display: grid;
     grid-template-columns: 3fr 1.3fr;
@@ -32,9 +32,9 @@
 .cart-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 10%;
+    grid-row-gap: 5%;
     grid-column-gap: 5%;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
     @include xheight(23);
     button {
         background-color: #fff;
@@ -112,7 +112,7 @@ a {
 }
 
 .checkout-btn {
-    margin: 2% 2% 0 0;
+    margin: 2% 2% 2% 0;
     background-color: #fb641b;
     color: #fff;
     width: 10vw;
@@ -135,13 +135,19 @@ a {
         border-top-style: groove;
         display: grid;
         padding: 0;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-row-gap: 5px;
-        span {
-            @include setFont(.65, 400);
-        }
-        span:last-of-type {
-            text-align: right;
+
+        .subtotal-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 2%;
+            span {
+                @include setFont(.65, 400);
+            }
+            span:last-of-type {
+                text-align: right;
+            }
         }
     }
 
@@ -189,7 +195,7 @@ a {
         font-size: 1.8rem;
     }
 
-    .cart-container {
+    .cart-items-container {
         display: block;
     }
 

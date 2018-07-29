@@ -28,13 +28,16 @@ export const selector = (function () {
         "removeItem": () => document.querySelectorAll('.remove-item'),
         "addtocartbtn": () => document.querySelectorAll('button.add-to-cart-btn'),
         "cartcount": () => document.querySelector('.cart-count'),
-        "cartcounts": () => document.querySelector('ol.cart-items'),
+        //"cartcounts": () => document.querySelector('ol.cart-items'),
+        "cartcounts": () => document.querySelector('.cart-container div section'),
         "cartprice": () => document.querySelectorAll('.item-price span'),
         "subtotalcontainer": () => document.querySelector('.subtotal-container div'),
         "proceed": () => document.querySelectorAll('.accordian-container a'),
         "addressaccordianinput": () => document.querySelectorAll('#address div input'),
         "accordianbtn": () => document.querySelectorAll('.accordian-container button'),
         "ordersummary": () => document.querySelector('.summary'),
+        "pay": () => document.querySelectorAll('.pay'),
+        
     };
 })();
 

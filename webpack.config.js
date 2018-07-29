@@ -13,9 +13,9 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     devServer: {
         contentBase: './dist'
@@ -57,9 +57,14 @@ module.exports = {
                 //loader: 'babel-loader',
                 //}
                 use: [
-                      "babel-loader",
-                      "eslint-loader",
-                    ],
+                        {
+                            loader: "babel-loader",
+                            options: {
+                                presets: ['es2015','react']
+                            }
+                        },
+                        "eslint-loader",
+                    ]
             },
             {
                 test: /\.scss$/,
@@ -76,11 +81,11 @@ module.exports = {
                     {
                         loader: "sass-loader",
                         options: {
-                                minimize: {
-                                    safe: true
-                                }
-
+                            minimize: {
+                                safe: true
                             }
+
+                        }
                     }
                 ]
             }

@@ -1,6 +1,9 @@
 import {
     selector
 } from '../../common/common';
+import { 
+    Cart 
+} from '../../cart/components/cart'; 
 
 const openNxtAccordian = (e) => {
     
@@ -19,7 +22,6 @@ const openNxtAccordian = (e) => {
 };
 
 const openAccordian = (e) => {
-  
     e.preventDefault();
     selector.addressaccordianinput().forEach((input) => {
         e.target.parentElement.querySelector('div').style['display'] = 'grid';
@@ -29,7 +31,14 @@ const openAccordian = (e) => {
     });
 };
 
+const pay = (e) => {
+    e.preventDefault();
+    Cart.clearCart();
+    window.location = '/index.html';
+};
+
 export const accordian = {
     openAccordian: openAccordian,
-    openNxtAccordian: openNxtAccordian
+    openNxtAccordian: openNxtAccordian,
+    pay: pay
 };

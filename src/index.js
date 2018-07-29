@@ -1,8 +1,6 @@
-
-
 import './styles/main.scss';
 import {
-  app
+    app
 } from './scripts/controller/GlobalController.js';
 
 require('babel-polyfill');

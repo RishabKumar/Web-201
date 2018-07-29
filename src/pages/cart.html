@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>
-        FOODIE - CART
+        DELICACY - CART
     </title>
     <link href="min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800" rel="stylesheet">
@@ -14,7 +15,7 @@
 
     <header class='header-height-l'>
         <div class='logo'>
-            <img src='https://www.nusu.co.uk/asset/Organisation/6583/Logo%20cropped.png?thumbnail_width=480&thumbnail_height=480&resize_type=ResizeWidth'>
+            <img src='/static/icons/logo.png'>
         </div>
         <nav>
             <ul>
@@ -22,7 +23,7 @@
                     <h3><a href='index.html'>Menu</a></h3>
                 </li>
                 <li>
-                    <h3><a href='cart.html'>Cart(<span class='cart-count'>0</span>)</a></h3>
+                    <h3><a class='cart-link' href='cart.html'>Cart(<span class='cart-count'>0</span>)</a></h3>
                 </li>
             </ul>
         </nav>
@@ -34,253 +35,8 @@
             </a>
         </div>
 
-        <section class='cart-container col-9 auto-margin'>
-
-            <div>
-                <div class='col-9 auto-margin'>
-                    <h2>Cart</h2>
-                </div>
-                <section>
-                    <ol class='cart-items col-9 auto-margin'>
-                        <!--
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                <span class="label">
-                                    <h3>
-                                        H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                    </h3>
-                                </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                    <span class="label">
-                                <h3>
-                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                </h3>
-                            </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                    <span class="label">
-                                <h3>
-                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                </h3>
-                            </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                    <span class="label">
-                                <h3>
-                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                </h3>
-                            </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                    <span class="label">
-                                <h3>
-                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                </h3>
-                            </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-                    <li>
-                        <div class='cart-item'>
-                            <div class='cart-item-img'>
-                                <div>
-                                    <img src='static/Chicken-Biryani.jpg'>
-                                </div>
-                            </div>
-                            <div class='cart-item-desc'>
-                                <div>
-                                    <h3>BIRYANI</h3>
-                                </div>
-                                <div class='size-container'>
-                                    <span class="label">
-                                <h3>
-                                    H<input name="size" value="h" class="halfSize" type="radio">F<input name="size" value="f" class="fullSize" checked="checked" type="radio">
-                                </h3>
-                            </span>
-                                </div>
-                                <div class='item-price'>
-                                    <h3><span>Rs 500.0</span></h3>
-                                </div>
-
-                            </div>
-                            <div class='item-qty'>
-                                <h4>
-                                    <span>
-                                        <a href='#'>-</a>
-                                        <input type='text' readonly value='0'>
-                                        <a href='#'>+</a>
-                                    </span>
-                                </h4>
-                            </div>
-                            <div class='remove-item'>
-                                <button>REMOVE</button>
-                            </div>
-                        </div>
-                        <hr>
-                    </li>
-    -->
-                    </ol>
-                </section>
-            </div>
-
-            <section class='subtotal-container'>
-                <div class='subtotal-container-div'>
-                </div>
-            </section>
-
+        <section id='cart-container'>
+            
 
         </section>
 
@@ -321,11 +77,31 @@
         </div>
     </footer>
 
-
-
-
-
-
+    <div id='root'></div>
+    <script type="text/babel">
+        ReactDOM.render(
+            <h1>Hello, world!</h1>, document.getElementById('root') 
+        );
+    </script>
 </body>
-
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "name": "DELICACY",
+  "image": "https://www.localhost.com/static/icons/logo.png",
+  "openingHours": [
+    "Mo-Sa 11:00-14:30",
+    "Mo-Th 17:00-21:30",
+    "Fr-Sa 17:00-22:00"
+  ],
+  "priceRange": "₹99-₹700",
+  "servesCuisine": [
+    "INDIAN",
+    "ITALIAN"
+  ],
+  "telephone": "+91-9999999999",
+  "url": "http://www.DELICACY.com"
+}
+</script>
 </html>
