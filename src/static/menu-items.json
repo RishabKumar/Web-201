@@ -5,7 +5,7 @@
 			"price": {
 						"f":"99"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Bread Pakoda Chaat",
 			"imgsrc":"bread-pakoda.jpg",
 			"splcategoryid":"102",
 			"categoryid":"202",
@@ -19,7 +19,7 @@
 						"h":"99",
 						"f":"165"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Nachos with Mozerella cheese",
 			"imgsrc":"cheesy-nachos.jpg",
 			"splcategoryid":"103,101",
 			"categoryid":"205",
@@ -47,7 +47,7 @@
 						"h":"200",
 						"f":"400"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Chicken Bruschetta served with our secret 21 herbs",
 			"imgsrc":"Chicken-Bruschetta.jpg",
 			"splcategoryid":"104",
 			"categoryid":"205",
@@ -60,7 +60,7 @@
 			"price": {
 						"f":"310"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Chicken Burger with double patty",
 			"imgsrc":"chicken-burger.jpg",
 			"splcategoryid":"101,103",
 			"categoryid":"203",
@@ -74,7 +74,7 @@
 						"h":"90",
 						"f":"160"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Tandoori Chicken Momos",
 			"imgsrc":"chicken-momos.jpg",
 			"splcategoryid":"101,102,103",
 			"categoryid":"201",
@@ -88,7 +88,7 @@
 						"h":"100",
 						"f":"180"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Chicken Nuggets",
 			"imgsrc":"chicken-nuggets.jpg",
 			"splcategoryid":"101,104",
 			"categoryid":"205",
@@ -101,7 +101,7 @@
 			"price": {
 						"f":"180"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Hot n spicy Chilly Potato",
 			"imgsrc":"chilly-potato.jpg",
 			"splcategoryid":"",
 			"categoryid":"205",
@@ -114,7 +114,7 @@
 			"price": {
 						"f":"420"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Chocolate Belgium Cake",
 			"imgsrc":"choco-belgium-cake.jpg",
 			"splcategoryid":"104",
 			"categoryid":"206",
@@ -127,7 +127,7 @@
 			"price": {
 						"f":"200"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Chole Bhature Chaat",
 			"imgsrc":"chole-bhature.jpg",
 			"splcategoryid":"101",
 			"categoryid":"202",
@@ -140,7 +140,7 @@
 			"price": {
 						"f":"165"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Egg Chomu",
 			"imgsrc":"egg-chomu.jpg",
 			"splcategoryid":"104",
 			"categoryid":"201",
@@ -153,7 +153,7 @@
 			"price": {
 						"f":"90"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Hot served Ferrero Rocher Brownie",
 			"imgsrc":"Ferrero-Rocher-Brownie.jpg",
 			"splcategoryid":"",
 			"categoryid":"206",
@@ -167,7 +167,7 @@
 						"h":"75",
 						"f":"120"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Salted French Fries with cheese",
 			"imgsrc":"french-fries.jpg",
 			"splcategoryid":"",
 			"categoryid":"205",
@@ -180,7 +180,7 @@
 			"price": {
 						"f":"500"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Yum Ghee on Roast Mutton",
 			"imgsrc":"ghee-roast-mutton.jpg",
 			"splcategoryid":"",
 			"categoryid":"204",
@@ -193,7 +193,7 @@
 			"price": {
 						"f":"360"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Eggless Japanese Chiffon Cake",
 			"imgsrc":"Japanese-Chiffon-Cake.jpg",
 			"splcategoryid":"104",
 			"categoryid":"206",
@@ -206,7 +206,7 @@
 			"price": {
 						"f":"350"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Hot n Juicy Lamb Burger",
 			"imgsrc":"lamb-burger.jpg",
 			"splcategoryid":"104,103",
 			"categoryid":"203",
@@ -219,7 +219,7 @@
 			"price": {
 						"f":"99"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Season special Minestrone Soup",
 			"imgsrc":"minestrone-soup.jpg",
 			"splcategoryid":"",
 			"categoryid":"201",
@@ -232,7 +232,7 @@
 			"price": {
 						"f":"250"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Non Veg Thali with chicken, rice, roti, salad",
 			"imgsrc":"non-veg-thali.jpg",
 			"splcategoryid":"",
 			"categoryid":"204",
@@ -245,7 +245,7 @@
 			"price": {
 						"f":"99"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Soft paneer tikka",
 			"imgsrc":"paneer-tikka.jpg",
 			"splcategoryid":"",
 			"categoryid":"201",
@@ -258,7 +258,7 @@
 			"price": {
 						"f":"25"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Samosa Chaat",
 			"imgsrc":"samosa.jpg",
 			"splcategoryid":"",
 			"categoryid":"202",
@@ -271,7 +271,7 @@
 			"price": {
 						"f":"200"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Veg biryani served with secret herbs",
 			"imgsrc":"veg-biryani.jpg",
 			"splcategoryid":"",
 			"categoryid":"204",
@@ -284,7 +284,7 @@
 			"price": {
 						"f":"150"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Veg Burger with double patty n cheese",
 			"imgsrc":"veg-burger.jpg",
 			"splcategoryid":"",
 			"categoryid":"203",
@@ -297,7 +297,7 @@
 			"price": {
 						"f":"160"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Veg Thali with daal, 3-rice, roti, salad and halwa",
 			"imgsrc":"veg-deluxe-thali.jpg",
 			"splcategoryid":"",
 			"categoryid":"204",
@@ -310,7 +310,7 @@
 			"price": {
 						"f":"99"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Veg Wrap with cheese n paneer",
 			"imgsrc":"veg-wrap.jpg",
 			"splcategoryid":"105",
 			"categoryid":"205",
@@ -323,7 +323,7 @@
 			"price": {
 						"f":"180"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"White Sauce Pasta with Penne",
 			"imgsrc":"white-pasta.jpg",
 			"splcategoryid":"105",
 			"categoryid":"205",
@@ -336,7 +336,7 @@
 			"price": {
 						"f":"109"
 					},
-			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"description":"Season special Wonton Noodle Soup",
 			"imgsrc":"wonton-noodle-soup.jpg",
 			"splcategoryid":"105,102",
 			"categoryid":"201",
