@@ -17,6 +17,7 @@ import firebase from 'firebase/app';
 import 'firebase/storage';
 
 export class ComponentsController {
+    
     constructor(page) {
         this.page = page;
         var config = {
